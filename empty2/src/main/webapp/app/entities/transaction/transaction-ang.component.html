@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span>Transactions</span>
+        <button class="btn btn-primary float-right create-transaction-ang" [routerLink]="['/', { outlets: { popup: ['transaction-ang-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span >
+            Create new Transaction
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="transactions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="trxDate"><span>Trx Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bookingDate"><span>Booking Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span>Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="originalAmount"><span>Original Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="originalCurrency"><span>Original Currency</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="accountName"><span>Account Name</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="account.id"><span>Account</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let transaction of transactions ;trackBy: trackId">
+                <td><a [routerLink]="['../transaction-ang', transaction.id ]">{{transaction.id}}</a></td>
+                <td>{{transaction.trxDate | date:'medium'}}</td>
+                <td>{{transaction.bookingDate | date:'medium'}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.originalAmount}}</td>
+                <td>{{transaction.originalCurrency}}</td>
+                <td>{{transaction.accountName}}</td>
+                <td>
+                    <div *ngIf="transaction.account">
+                        <a [routerLink]="['../bank-account-ang', transaction.account?.id ]" >{{transaction.account?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../transaction-ang', transaction.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'transaction-ang/'+ transaction.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'transaction-ang/'+ transaction.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

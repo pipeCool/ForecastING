@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "kto",
+            "otherEntityName": "bankAccount",
+            "otherEntityRelationshipName": "account"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "holder",
+            "otherEntityName": "accountHolder",
+            "otherEntityRelationshipName": "account"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170508045233",
+    "entityTableName": "main_account",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "angularJSSuffix": "Ang"
+}

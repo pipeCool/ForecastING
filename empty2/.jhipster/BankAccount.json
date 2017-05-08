@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "javadoc": "A relationship",
+            "relationshipName": "transaction",
+            "otherEntityName": "transaction",
+            "otherEntityRelationshipName": "account"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "account",
+            "otherEntityName": "mainAccount",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fixedAccessDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "accessDelay",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "Currency",
+            "fieldValues": "EURO,DOLLAR"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "AccountType",
+            "fieldValues": "GIRO,DAILY,FIXED"
+        }
+    ],
+    "changelogDate": "20170508045235",
+    "entityTableName": "bank_account",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "angularJSSuffix": "Ang"
+}

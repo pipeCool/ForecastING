@@ -1,0 +1,66 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myBankAccountLabel">Create or edit a Bank Account</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!bankAccount.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="bankAccount.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_accountName">Account Name</label>
+            <input type="text" class="form-control" name="accountName" id="field_accountName"
+                [(ngModel)]="bankAccount.accountName"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_fixedAccessDate">Fixed Access Date</label>
+            <div class="d-flex">
+                <input id="field_fixedAccessDate" type="datetime-local" class="form-control" name="fixedAccessDate" [(ngModel)]="bankAccount.fixedAccessDate"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_accessDelay">Access Delay</label>
+            <input type="number" class="form-control" name="accessDelay" id="field_accessDelay"
+                [(ngModel)]="bankAccount.accessDelay"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_currency">Currency</label>
+            <select class="form-control" name="currency" [(ngModel)]="bankAccount.currency" id="field_currency" >
+                <option value="EURO">EURO</option>
+                <option value="DOLLAR">DOLLAR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_type">Type</label>
+            <select class="form-control" name="type" [(ngModel)]="bankAccount.type" id="field_type" >
+                <option value="GIRO">GIRO</option>
+                <option value="DAILY">DAILY</option>
+                <option value="FIXED">FIXED</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="field_account">Account</label>
+            <select class="form-control" id="field_account" name="account" [(ngModel)]="bankAccount.account" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="mainAccountOption.id === bankAccount.account?.id ? bankAccount.account : mainAccountOption" *ngFor="let mainAccountOption of mainaccounts; trackBy: trackMainAccountById">{{mainAccountOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

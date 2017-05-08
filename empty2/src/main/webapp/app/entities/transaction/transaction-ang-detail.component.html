@@ -1,0 +1,51 @@
+
+<div *ngIf="transaction">
+    <h2><span>Transaction</span> {{transaction.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Trx Date</span></dt>
+        <dd>
+            <span>{{transaction.trxDate | date:'medium'}}</span>
+        </dd>
+        <dt><span>Booking Date</span></dt>
+        <dd>
+            <span>{{transaction.bookingDate | date:'medium'}}</span>
+        </dd>
+        <dt><span>Amount</span></dt>
+        <dd>
+            <span>{{transaction.amount}}</span>
+        </dd>
+        <dt><span>Original Amount</span></dt>
+        <dd>
+            <span>{{transaction.originalAmount}}</span>
+        </dd>
+        <dt><span>Original Currency</span></dt>
+        <dd>
+            <span>{{transaction.originalCurrency}}</span>
+        </dd>
+        <dt><span>Account Name</span></dt>
+        <dd>
+            <span>{{transaction.accountName}}</span>
+        </dd>
+        <dt><span>Account</span></dt>
+        <dd>
+            <div *ngIf="transaction.account">
+                <a [routerLink]="['/bank-account-ang', transaction.account?.id]">{{transaction.account?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'transaction-ang/'+ transaction.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

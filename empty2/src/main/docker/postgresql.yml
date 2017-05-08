@@ -1,0 +1,11 @@
+version: '2'
+services:
+    empty2-postgresql:
+        image: postgres:9.6.2
+        # volumes:
+        #     - ~/volumes/jhipster/empty2/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=empty2
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

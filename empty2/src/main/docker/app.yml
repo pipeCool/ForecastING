@@ -1,0 +1,14 @@
+version: '2'
+services:
+    empty2-app:
+        image: empty2
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://empty2-postgresql:5432/empty2
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    empty2-postgresql:
+        extends:
+            file: postgresql.yml
+            service: empty2-postgresql

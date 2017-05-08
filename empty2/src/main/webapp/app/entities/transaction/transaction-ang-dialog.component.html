@@ -1,0 +1,71 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTransactionLabel">Create or edit a Transaction</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!transaction.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="transaction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_trxDate">Trx Date</label>
+            <div class="d-flex">
+                <input id="field_trxDate" type="datetime-local" class="form-control" name="trxDate" [(ngModel)]="transaction.trxDate"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_bookingDate">Booking Date</label>
+            <div class="d-flex">
+                <input id="field_bookingDate" type="datetime-local" class="form-control" name="bookingDate" [(ngModel)]="transaction.bookingDate"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                [(ngModel)]="transaction.amount"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_originalAmount">Original Amount</label>
+            <input type="number" class="form-control" name="originalAmount" id="field_originalAmount"
+                [(ngModel)]="transaction.originalAmount"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_originalCurrency">Original Currency</label>
+            <select class="form-control" name="originalCurrency" [(ngModel)]="transaction.originalCurrency" id="field_originalCurrency" >
+                <option value="EURO">EURO</option>
+                <option value="DOLLAR">DOLLAR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_accountName">Account Name</label>
+            <input type="text" class="form-control" name="accountName" id="field_accountName"
+                [(ngModel)]="transaction.accountName"
+             />
+        </div>
+
+        <div class="form-group">
+            <label for="field_account">Account</label>
+            <select class="form-control" id="field_account" name="account" [(ngModel)]="transaction.account" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="bankAccountOption.id === transaction.account?.id ? transaction.account : bankAccountOption" *ngFor="let bankAccountOption of bankaccounts; trackBy: trackBankAccountById">{{bankAccountOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

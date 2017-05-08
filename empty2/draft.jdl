@@ -1,0 +1,57 @@
+
+entity MainAccount {
+	accountName String
+}
+
+entity AccountHolder {
+	firstName String,
+	lastName String,
+    dob ZonedDateTime,
+    
+}
+entity BankAccount {
+	accountName String,
+	fixedAccessDate ZonedDateTime,
+    accessDelay Long,
+    currency Currency,
+    type AccountType
+}
+
+entity Transaction{
+	trxDate ZonedDateTime,
+	bookingDate ZonedDateTime,
+	amount Double,
+	originalAmount Double,
+    originalCurrency Currency,
+	accountName String,
+	accountName String,
+	accountName String
+}
+
+enum Currency {
+    EURO, DOLLAR
+}
+enum AccountType {
+    GIRO, DAILY, FIXED
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	MainAccount{kto} to BankAccount{account},
+	MainAccount{holder} to AccountHolder{account},
+	/**
+	* A relationship
+	*/
+	BankAccount{transaction} to	Transaction{account}
+}
+
+// Set pagination options
+paginate Transaction with infinite-scroll
+paginate BankAccount with pagination
+
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with Ang

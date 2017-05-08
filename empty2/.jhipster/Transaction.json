@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "account",
+            "otherEntityName": "bankAccount",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "trxDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "bookingDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "originalAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "originalCurrency",
+            "fieldType": "Currency",
+            "fieldValues": "EURO,DOLLAR"
+        },
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170508045236",
+    "entityTableName": "transaction",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "angularJSSuffix": "Ang"
+}

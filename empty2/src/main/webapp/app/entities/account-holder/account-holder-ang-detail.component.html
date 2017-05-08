@@ -1,0 +1,39 @@
+
+<div *ngIf="accountHolder">
+    <h2><span>Account Holder</span> {{accountHolder.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>First Name</span></dt>
+        <dd>
+            <span>{{accountHolder.firstName}}</span>
+        </dd>
+        <dt><span>Last Name</span></dt>
+        <dd>
+            <span>{{accountHolder.lastName}}</span>
+        </dd>
+        <dt><span>Dob</span></dt>
+        <dd>
+            <span>{{accountHolder.dob | date:'medium'}}</span>
+        </dd>
+        <dt><span>Account</span></dt>
+        <dd>
+            <div *ngIf="accountHolder.account">
+                <a [routerLink]="['/main-account-ang', accountHolder.account?.id]">{{accountHolder.account?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'account-holder-ang/'+ accountHolder.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

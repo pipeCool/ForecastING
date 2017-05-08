@@ -1,0 +1,47 @@
+
+<div *ngIf="bankAccount">
+    <h2><span>Bank Account</span> {{bankAccount.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Account Name</span></dt>
+        <dd>
+            <span>{{bankAccount.accountName}}</span>
+        </dd>
+        <dt><span>Fixed Access Date</span></dt>
+        <dd>
+            <span>{{bankAccount.fixedAccessDate | date:'medium'}}</span>
+        </dd>
+        <dt><span>Access Delay</span></dt>
+        <dd>
+            <span>{{bankAccount.accessDelay}}</span>
+        </dd>
+        <dt><span>Currency</span></dt>
+        <dd>
+            <span>{{bankAccount.currency}}</span>
+        </dd>
+        <dt><span>Type</span></dt>
+        <dd>
+            <span>{{bankAccount.type}}</span>
+        </dd>
+        <dt><span>Account</span></dt>
+        <dd>
+            <div *ngIf="bankAccount.account">
+                <a [routerLink]="['/main-account-ang', bankAccount.account?.id]">{{bankAccount.account?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'bank-account-ang/'+ bankAccount.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
