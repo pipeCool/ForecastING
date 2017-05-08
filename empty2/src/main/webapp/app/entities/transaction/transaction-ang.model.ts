@@ -4,7 +4,7 @@ const enum Currency {
     'DOLLAR'
 
 };
-import { BankAccount } from '../bank-account';
+import { BankAccountAng } from '../bank-account';
 export class TransactionAng {
     constructor(
         public id?: number,
@@ -14,7 +14,7 @@ export class TransactionAng {
         public originalAmount?: number,
         public originalCurrency?: Currency,
         public accountName?: string,
-        public account?: BankAccount,
+        public account?: BankAccountAng,
     ) {
     }
 }

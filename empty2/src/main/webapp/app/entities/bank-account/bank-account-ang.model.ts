@@ -11,8 +11,8 @@ const enum AccountType {
     'FIXED'
 
 };
-import { Transaction } from '../transaction';
-import { MainAccount } from '../main-account';
+import { TransactionAng } from '../transaction';
+import { MainAccountAng } from '../main-account';
 export class BankAccountAng {
     constructor(
         public id?: number,
@@ -21,8 +21,8 @@ export class BankAccountAng {
         public accessDelay?: number,
         public currency?: Currency,
         public type?: AccountType,
-        public transaction?: Transaction,
-        public account?: MainAccount,
+        public transaction?: TransactionAng,
+        public account?: MainAccountAng,
     ) {
     }
 }

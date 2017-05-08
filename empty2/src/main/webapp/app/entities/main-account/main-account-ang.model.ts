@@ -1,11 +1,11 @@
-import { BankAccount } from '../bank-account';
-import { AccountHolder } from '../account-holder';
+import { BankAccountAng } from '../bank-account';
+import { AccountHolderAng } from '../account-holder';
 export class MainAccountAng {
     constructor(
         public id?: number,
         public accountName?: string,
-        public kto?: BankAccount,
-        public holder?: AccountHolder,
+        public kto?: BankAccountAng,
+        public holder?: AccountHolderAng,
     ) {
     }
 }
