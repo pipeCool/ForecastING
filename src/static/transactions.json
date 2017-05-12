@@ -1,0 +1,96 @@
+{
+    "transactions" : [{
+        "type" : "DIRECT_SALE",
+        "totalAmount" : 100.0,
+        "shippingAmount" : 3.5,
+        "orderAmount" : 96.5,
+        "items" : [ {
+            "quantity" : 3,
+            "name" : "Bobbycar",
+            "ean" : "800001303",
+            "price" : 25.99
+        }, {
+            "quantity" : 1,
+            "name" : "Helm",
+            "price" : 18.53
+        } ],
+        "currency" : "EUR",
+        "overcapture" : false,
+        "shippingAddress" : {
+            "addresseeGivenName" : "Marie",
+            "addresseeLastName" : "Mustermann",
+            "company" : "Musterbau GmbH & Co KG",
+            "street" : "Kastanienallee",
+            "streetNr" : "999",
+            "additionalAddressInformation" : "Im Rückgebäude",
+            "zip" : "90402",
+            "city" : "Schwaig",
+            "countryCode" : "DE",
+            "state" : "Bayern"
+        },
+        "deliveryInformation" : {
+            "expectedShippingDate" : "2016-10-19T12:00:00Z",
+            "logisticsProvider" : "DHL",
+            "trackingNumber" : "1234567890"
+        },
+        "merchantCustomerNumber" : "cust-732477",
+        "merchantOrderReferenceNumber" : "order-A12223412",
+        "merchantReconciliationReferenceNumber" : "recon-A12223412",
+        "merchantInvoiceReferenceNumber" : "20150112334345",
+        "note" : "Ihr Einkauf bei Spielauto-Versand.",
+        "sha256hashedEmailAddress" : "fxP4R-IxH1Eaxpb0f_i5Shc8-FrYrtmx5lx35f9Xzgg",
+        "minimumAge" : 18,
+        "redirectUrlAfterSuccess" : "https://spielauto-versand.de/order/123/success",
+        "redirectUrlAfterCancellation" : "https://spielauto-versand.de/order/123/cancellation",
+        "redirectUrlAfterAgeVerificationFailure" : "https://spielauto-versand.de/order/123/ageverificationfailed",
+        "redirectUrlAfterRejection" : "https://spielauto-versand.de/order/123/rejection",
+        "callbackUrlStatusUpdates" : "https://spielauto-versand.de/callback/status"
+    }, {
+        "type" : "DIRECT_SALE",
+        "totalAmount" : 543.0,
+        "shippingAmount" : 0.0,
+        "orderAmount" : 543.0,
+        "items" : [ {
+            "quantity" : 2,
+            "name" : "Tickets",
+            "ean" : "800000000",
+            "price" : 225.99
+        }, {
+            "quantity" : 1,
+            "name" : "Popcorn",
+            "price" : 18.53
+        } ],
+        "currency" : "EUR",
+        "overcapture" : false,
+        "shippingAddress" : {
+            "addresseeGivenName" : "Marie",
+            "addresseeLastName" : "Mustermann",
+            "company" : "Musterbau GmbH & Co KG",
+            "street" : "Kastanienallee",
+            "streetNr" : "999",
+            "additionalAddressInformation" : "Im Rückgebäude",
+            "zip" : "90402",
+            "city" : "Schwaig",
+            "countryCode" : "DE",
+            "state" : "Bayern"
+        },
+        "deliveryInformation" : {
+            "expectedShippingDate" : "",
+            "logisticsProvider" : "",
+            "trackingNumber" : ""
+        },
+        "merchantCustomerNumber" : "cust-732477",
+        "merchantOrderReferenceNumber" : "order-A12223412",
+        "merchantReconciliationReferenceNumber" : "recon-A12223412",
+        "merchantInvoiceReferenceNumber" : "20150112334345",
+        "note" : "Ihr Einkauf bei Ticket Express-Versand.",
+        "sha256hashedEmailAddress" : "fxP4R-IxH1Eaxpb0f_i5Shc8-FrYrtmx5lx35f9Xzgg",
+        "minimumAge" : 18,
+        "redirectUrlAfterSuccess" : "https://ticket-versand.de/order/123/success",
+        "redirectUrlAfterCancellation" : "https://ticket-versand.de/order/123/cancellation",
+        "redirectUrlAfterAgeVerificationFailure" : "https://ticket-versand.de/order/123/ageverificationfailed",
+        "redirectUrlAfterRejection" : "https://ticket-versand.de/order/123/rejection",
+        "callbackUrlStatusUpdates" : "https://ticket-versand.de/callback/status"
+    }]
+
+}
