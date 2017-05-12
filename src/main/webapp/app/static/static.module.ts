@@ -7,6 +7,9 @@ import { STATIC_ROUTE, StaticComponent } from './';
     imports: [
         JhipsterSampleApplicationNg2SharedModule,
         RouterModule.forRoot([ STATIC_ROUTE ], { useHash: true })
-    ]
+    ],
+    declarations: [
+        StaticComponent
+    ],
 })
 export class JhipsterSampleApplicationNg2StaticModule {}
