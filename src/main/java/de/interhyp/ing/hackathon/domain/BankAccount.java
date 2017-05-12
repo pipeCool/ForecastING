@@ -1,8 +1,13 @@
 package de.interhyp.ing.hackathon.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.*;
+
 
 import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -38,6 +43,10 @@ public class BankAccount implements Serializable {
 
     @ManyToOne
     private User user;
+
+    @Transient
+    @JsonProperty
+    private Double forecast = 10.0;
 
     public Long getId() {
         return id;
@@ -124,6 +133,11 @@ public class BankAccount implements Serializable {
         this.user = user;
     }
 
+    public Double getForecast()
+    {
+        return this.forecast;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -151,6 +165,7 @@ public class BankAccount implements Serializable {
             ", iban='" + getIban() + "'" +
             ", bank='" + getBank() + "'" +
             ", currentAmount='" + getCurrentAmount() + "'" +
+            ", forecast='" + getForecast() + "'" +
             "}";
     }
 }
