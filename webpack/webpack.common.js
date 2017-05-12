@@ -65,7 +65,7 @@ module.exports = function (options) {
                         replacements: [{
                             pattern: /\/\* @toreplace (\w*?) \*\//ig,
                             replacement: function (match, p1, offset, string) {
-                                return `_${p1} = ${DATAS[p1]};`;
+                                return '${p1} = ${DATAS[p1]}';
                             }
                         }]
                     })
