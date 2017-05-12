@@ -31,7 +31,7 @@ public class TransactionResource {
     private final Logger log = LoggerFactory.getLogger(TransactionResource.class);
 
     private static final String ENTITY_NAME = "transaction";
-        
+
     private final TransactionService transactionService;
 
     public TransactionResource(TransactionService transactionService) {

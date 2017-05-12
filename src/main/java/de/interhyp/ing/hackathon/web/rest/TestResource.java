@@ -1,10 +1,13 @@
 package de.interhyp.ing.hackathon.web.rest;
 
 import de.interhyp.ing.hackathon.external.ing.IngApiHandler;
+import de.interhyp.ing.hackathon.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -19,17 +22,31 @@ public class TestResource {
     private final Logger log = LoggerFactory.getLogger(TestResource.class);
 
     private final IngApiHandler ingApiHandler;
+    private final UserRepository userRepository;
 
-    public TestResource(IngApiHandler ingApiHandler) {
+    private final PasswordEncoder passwordEncoder;
 
+    private final AuthorityRepository authorityRepository;
+    private final BankAccountRepository bankAccountRepository;
+    private final TransactionRepository transactionRepository;
+
+    public TestResource(IngApiHandler ingApiHandler, UserRepository userRepository, PasswordEncoder passwordEncoder,
+                        AuthorityRepository authorityRepository,
+                        BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.authorityRepository = authorityRepository;
+        this.bankAccountRepository = bankAccountRepository;
+        this.transactionRepository = transactionRepository;
         this.ingApiHandler = ingApiHandler;
     }
 
     @GetMapping("/start")
-    public void doTestCall() throws IOException {
+    public void doTestCall(HttpServletResponse response) throws IOException {
         log.info("called - will try handshake 1...");
-        ingApiHandler.init();
+        String url = ingApiHandler.init();
         log.info("what happend?? ;) ...");
+        response.sendRedirect(url);
 
     }
 
@@ -38,7 +55,9 @@ public class TestResource {
         log.info("called - will try handshake 1.. got Token {}.. - lets Put in in Cache..", token);
         //TODO Later link to user...
         CACHE.put(id, token);
-        ingApiHandler.handleIt(id, token);
+        ingApiHandler.handleIt(id, token, userRepository, passwordEncoder,
+            authorityRepository,
+            bankAccountRepository, transactionRepository);
 
     }
 }
