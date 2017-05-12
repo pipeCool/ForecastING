@@ -1,16 +1,16 @@
-entity User {
+entity FCUser {
 	name String,
     login String required
 }
 
-entity Account {
+entity Bankaccount {
 	iban String,
     bank String,
     currentAmount Double
 }
 
 entity Transaction {
-	date Date,
+	date ZonedDateTime,
     amount Double,
     status TransactionStatus
 }
@@ -31,11 +31,11 @@ enum TransactionStatus {
 }
 
 relationship OneToMany {
-	User{account} to Account
+	FCUser{bankaccount} to Bankaccount
 }
 
 relationship OneToMany {
-	Account{transaction} to Transaction
+	Bankaccount{transaction} to Transaction
 }
 
 relationship ManyToOne {
