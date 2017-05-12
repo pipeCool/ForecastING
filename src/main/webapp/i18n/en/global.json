@@ -13,6 +13,7 @@
                 "bankAccount": "Bank Account",
                 "transactionMySuffix": "Transaction",
                 "locationMySuffix": "Location",
+                "calendar": "Calendar",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
