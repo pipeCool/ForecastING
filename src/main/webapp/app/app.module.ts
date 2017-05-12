@@ -9,7 +9,7 @@ import { JhipsterSampleApplicationNg2HomeModule } from './home/home.module';
 import { JhipsterSampleApplicationNg2AdminModule } from './admin/admin.module';
 import { JhipsterSampleApplicationNg2AccountModule } from './account/account.module';
 import { JhipsterSampleApplicationNg2EntityModule } from './entities/entity.module';
-import { JhipsterSampleApplicationNg2StaticModule } from './static/static.module';
+import { JhipsterSampleApplicationNg2CalendarModule } from './calendar/calendar.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -35,7 +35,7 @@ import {
         JhipsterSampleApplicationNg2AdminModule,
         JhipsterSampleApplicationNg2AccountModule,
         JhipsterSampleApplicationNg2EntityModule,
-        JhipsterSampleApplicationNg2StaticModule
+        JhipsterSampleApplicationNg2CalendarModule
     ],
     declarations: [
         JhiMainComponent,
