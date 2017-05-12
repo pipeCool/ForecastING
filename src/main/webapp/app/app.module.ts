@@ -9,7 +9,7 @@ import { Interhyp4HackathonHomeModule } from './home/home.module';
 import { Interhyp4HackathonAdminModule } from './admin/admin.module';
 import { Interhyp4HackathonAccountModule } from './account/account.module';
 import { Interhyp4HackathonEntityModule } from './entities/entity.module';
-import { JhipsterSampleApplicationNg2CalendarModule } from './calendar/calendar.module';
+import { Interhyp4HackathonEntityModuleCalendarModule } from './calendar/calendar.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -35,7 +35,7 @@ import {
         Interhyp4HackathonAdminModule,
         Interhyp4HackathonAccountModule,
         Interhyp4HackathonEntityModule,
-        JhipsterSampleApplicationNg2CalendarModule
+        Interhyp4HackathonEntityModuleCalendarModule
     ],
     declarations: [
         JhiMainComponent,
