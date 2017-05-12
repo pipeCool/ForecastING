@@ -1,15 +1,30 @@
-/**
- * Created by Notebook-9 on 12/05/2017.
- */
-
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { JhipsterSampleApplicationNg2SharedModule } from '../shared';
+import { CALENDAR_ROUTE, CalendarComponent} from './';
+import { CalendarUtilsModule } from './calendar-utils/module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
-        BrowserAnimationsModule, // angular 4.0+ only
-        CalendarModule.forRoot()
+        CommonModule,
+        FormsModule,
+        NgbModalModule.forRoot(),
+        CalendarModule.forRoot(),
+        BrowserAnimationsModule,
+        CalendarUtilsModule,
+        JhipsterSampleApplicationNg2SharedModule,
+        RouterModule.forRoot([ CALENDAR_ROUTE ], { useHash: true })
+    ],
+    declarations: [
+        CalendarComponent
+    ],
+    exports: [
+        CalendarComponent
     ]
 })
-export class MyModule {}
+export class JhipsterSampleApplicationNg2CalendarModule {}

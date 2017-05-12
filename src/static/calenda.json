@@ -1,0 +1,14 @@
+{
+    "events":
+    [
+        {
+            "start": "2017-05-30T20:59:59.999Z",
+            "end": "2017-06-30T21:59:59.999Z",
+            "title": "A long event that spans 2 months",
+            "color": {
+                "primary": "#1e90ff ",
+                "secondary": "#D1E8FF "
+            }
+        }
+    ]
+}
