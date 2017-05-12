@@ -22,6 +22,7 @@ public class BankAccount implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+
     @Column(name = "iban")
     private String iban;
 

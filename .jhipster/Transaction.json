@@ -24,6 +24,10 @@
             "fieldType": "Double"
         },
         {
+            "fieldName": "trxId",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "status",
             "fieldType": "TransactionStatus",
             "fieldValues": "FIXED,PENDING,PREDICTED"

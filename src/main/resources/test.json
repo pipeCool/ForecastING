@@ -1,0 +1,20 @@
+{
+    "id": "01360874-de3c-6751-a7d3-e102796d58ca",
+    "label": "Konto Komfort",
+    "number": "65",
+    "owners": [
+        {
+            "id": null,
+            "provider": "http://127.0.0.1:8080",
+            "display_name": "Karolina Orłowska"
+        }
+    ],
+    "type": "CURRENT PLUS",
+    "balance": {
+        "currency": "EUR",
+        "amount": "54296.00"
+    },
+    "IBAN": "PL58158099527015336401864121",
+    "swift_bic": " ",
+    "bank_id": "ing"
+}

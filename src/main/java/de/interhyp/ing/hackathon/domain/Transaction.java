@@ -22,6 +22,9 @@ public class Transaction implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    @Column(name = "trx_id")
+    private String trxId;
+
     @Column(name = "jhi_date")
     private ZonedDateTime date;
 
@@ -37,6 +40,14 @@ public class Transaction implements Serializable {
 
     @ManyToOne
     private BankAccount bankaccount;
+
+    public String getTrxId() {
+        return trxId;
+    }
+
+    public void setTrxId(String trxId) {
+        this.trxId = trxId;
+    }
 
     public Long getId() {
         return id;
