@@ -96,6 +96,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.github.scribejava</groupId>
+            <artifactId>scribejava-apis</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.api-client</groupId>
             <artifactId>google-api-client</artifactId>
             <version>1.22.0</version>
@@ -104,6 +114,12 @@
             <groupId>com.google.oauth-client</groupId>
             <artifactId>google-oauth-client-jetty</artifactId>
             <version>1.22.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>org.mortbay.jetty</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.google.apis</groupId>
@@ -950,6 +966,5 @@
                 </dependency>
             </dependencies>
         </profile>
-
     </profiles>
 </project>
