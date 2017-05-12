@@ -1,0 +1,2404 @@
+{
+    "transactions": [
+        {
+            "id": "253bcebd-0ff6-432d-7617-a9b3fa8504b0",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "bb23b8d1-289c-454e-81fa-ac8b2cab708d",
+                "holder": {
+                    "name": "Apart"
+                },
+                "number": "29",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL26159851873655040559887575",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Apart shopping.",
+                "posted": "2017-05-11T13:15:36Z",
+                "completed": "2017-05-11T13:15:36Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "74603.67"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-33.20"
+                }
+            }
+        },
+        {
+            "id": "20bbe3e9-b95e-9131-660a-0cb8fd728466",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-05-10T13:15:58Z",
+                "completed": "2017-05-10T13:15:58Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "74636.87"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-90.92"
+                }
+            }
+        },
+        {
+            "id": "77f321a0-3962-3a2a-1f22-b7f29b1ddf5a",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fce68dc0-9a4d-4411-9fd9-06e5fbd28719",
+                "holder": {
+                    "name": "Anna Nowicka"
+                },
+                "number": "40",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL13735432187777451395665150",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Just bury her well",
+                "posted": "2017-05-09T15:36:39Z",
+                "completed": "2017-05-09T15:36:39Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "74727.79"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-168.24"
+                }
+            }
+        },
+        {
+            "id": "c3b4d3f5-6fec-4e33-702b-7ea9586711ec",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "32569a6a-bcb2-49d9-af65-642adc7dd3d2",
+                "holder": {
+                    "name": "Biedronka"
+                },
+                "number": "5",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL15575275287655328943019312",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Biedronka shopping.",
+                "posted": "2017-05-09T13:42:25Z",
+                "completed": "2017-05-09T13:42:25Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "74896.03"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-59.11"
+                }
+            }
+        },
+        {
+            "id": "2e6c40c4-235d-2bbf-31c3-8ec7ca10e5f7",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "288f82c6-a70d-429f-986e-76fe0eaa06d4",
+                "holder": {
+                    "name": "Kaja Kaczmarek"
+                },
+                "number": "42",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL20671294670349971783883909",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "I am Spartacus.",
+                "posted": "2017-05-08T15:32:56Z",
+                "completed": "2017-05-08T15:32:56Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "74955.14"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-173.71"
+                }
+            }
+        },
+        {
+            "id": "c87969d6-1185-b6be-1adc-4d09bf1bf0a3",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "447e6e2a-224c-412d-8ae7-3d2015b8200f",
+                "holder": {
+                    "name": "Mediamarkt.pl"
+                },
+                "number": "15",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL79243983923619387961339983",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Mediamarkt.pl shopping.",
+                "posted": "2017-05-08T13:45:00Z",
+                "completed": "2017-05-08T13:45:00Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75128.85"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-97.25"
+                }
+            }
+        },
+        {
+            "id": "c150c1ba-e25d-1a6f-89aa-48c0c0ec46ac",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "64dcd3ac-3e52-4511-9675-47d723ddf511",
+                "holder": {
+                    "name": "Douglas"
+                },
+                "number": "17",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL02117440393207002931007399",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Douglas shopping.",
+                "posted": "2017-05-07T13:40:28Z",
+                "completed": "2017-05-07T13:40:28Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75226.10"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-46.73"
+                }
+            }
+        },
+        {
+            "id": "61da7a8e-bfdf-351a-4d93-5dc9761ed93b",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "7d2ac292-2632-43b5-8df5-8a22358c6db3",
+                "holder": {
+                    "name": "Świat Alkoholi"
+                },
+                "number": "32",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL37978762170135820025946301",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Świat Alkoholi shopping.",
+                "posted": "2017-05-06T13:41:35Z",
+                "completed": "2017-05-06T13:41:35Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75272.83"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-108.16"
+                }
+            }
+        },
+        {
+            "id": "556fd049-9905-a9d7-113e-f6304d5440ba",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "61285f97-d328-463c-9f91-5ec8c75e29d3",
+                "holder": {
+                    "name": "Cefarm25"
+                },
+                "number": "12",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL77307311081733154142487791",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Cefarm25 shopping.",
+                "posted": "2017-05-05T13:51:13Z",
+                "completed": "2017-05-05T13:51:13Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75380.99"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-59.91"
+                }
+            }
+        },
+        {
+            "id": "fca7af68-01a3-38b8-79ef-b28fc48463ff",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "c071375e-bf28-46e0-b951-d4b54e89fe6a",
+                "holder": {
+                    "name": "Spółdzielnia Mieszkaniowa KSM"
+                },
+                "number": "14",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL40810333307137683484976571",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Water 05/2017",
+                "posted": "2017-05-05T12:09:20Z",
+                "completed": "2017-05-05T12:09:20Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75440.90"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-80.44"
+                }
+            }
+        },
+        {
+            "id": "5eee2df8-b125-cfd5-a8a9-c918a35fe75d",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "f0b7d181-0aae-41df-8d4b-5fb77fba36b8",
+                "holder": {
+                    "name": "PGNIG S.A."
+                },
+                "number": "13",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL70938618941990086049419613",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Gas payment 05/2017",
+                "posted": "2017-05-05T12:07:48Z",
+                "completed": "2017-05-05T12:07:48Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75521.34"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-48.56"
+                }
+            }
+        },
+        {
+            "id": "d67f3aa5-03aa-3564-4b1a-cfa0ca8b6b05",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "c071375e-bf28-46e0-b951-d4b54e89fe6a",
+                "holder": {
+                    "name": "Spółdzielnia Mieszkaniowa KSM"
+                },
+                "number": "14",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL40810333307137683484976571",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Monthly rent 05/2017",
+                "posted": "2017-05-05T12:05:13Z",
+                "completed": "2017-05-05T12:05:13Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75569.90"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-314.88"
+                }
+            }
+        },
+        {
+            "id": "b02a1b49-7cdb-fe12-48d0-83f700ad8aee",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "6d108d07-5226-44ef-9e5f-5c4df62d1193",
+                "holder": {
+                    "name": "TAURON Polska Energia S.A."
+                },
+                "number": "10",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL64534812577919012677307687",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Electricity bill",
+                "posted": "2017-05-05T12:04:46Z",
+                "completed": "2017-05-05T12:04:46Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75884.78"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-74.97"
+                }
+            }
+        },
+        {
+            "id": "5e4ef6b1-7695-814b-1f2d-7a2ba474c4c6",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fdfc2d4e-7df5-4838-82b1-55c406b682d8",
+                "holder": {
+                    "name": "Victoria’s Secret"
+                },
+                "number": "31",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL43700349110961843923833784",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Victoria’s Secret shopping.",
+                "posted": "2017-05-04T13:42:20Z",
+                "completed": "2017-05-04T13:42:20Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "75959.75"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-47.48"
+                }
+            }
+        },
+        {
+            "id": "e90ec83b-b72f-17cd-f385-4d101e2c205c",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "08be372d-eacc-4918-a64d-4d1d80214f67",
+                "holder": {
+                    "name": "Orlen"
+                },
+                "number": "7",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL87569260842728718906046671",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Gas station",
+                "posted": "2017-05-03T14:12:59Z",
+                "completed": "2017-05-03T14:12:59Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "76007.23"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-136.41"
+                }
+            }
+        },
+        {
+            "id": "2171330c-8de0-631e-c4ec-9e069066ceec",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fbe5a3b4-2934-4b43-9f03-bac95c626945",
+                "holder": {
+                    "name": "Restauracja Złoty Osioł"
+                },
+                "number": "2",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL17021518430953248427823216",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Restauracja Złoty Osioł dinner.",
+                "posted": "2017-05-02T13:06:57Z",
+                "completed": "2017-05-02T13:06:57Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "76143.64"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-29.33"
+                }
+            }
+        },
+        {
+            "id": "fda43774-a908-7480-f343-7770f67ab453",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "eb8d4ba0-f3d7-47dd-8ace-64a452356c79",
+                "holder": {
+                    "name": "ING Bank Śląski"
+                },
+                "number": "3",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL41522319248614863767576903",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Loan installment",
+                "posted": "2017-05-01T14:59:13Z",
+                "completed": "2017-05-01T14:59:13Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "76172.97"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-531.88"
+                }
+            }
+        },
+        {
+            "id": "ff11c30b-4c6e-7491-b74d-3d765f47cfc9",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "966c2587-c26d-4809-829a-2851689c37bb",
+                "holder": {
+                    "name": "Apteka Melissa"
+                },
+                "number": "28",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL38241390322998845436402529",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Apteka Melissa shopping.",
+                "posted": "2017-05-01T13:13:03Z",
+                "completed": "2017-05-01T13:13:03Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "76704.85"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-94.54"
+                }
+            }
+        },
+        {
+            "id": "ba97152b-c25f-0248-8de0-008699576ffa",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "65b1e84e-5782-4987-9379-ad1ae2332f31",
+                "holder": {
+                    "name": "IBM Polska"
+                },
+                "number": "11",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL89702340276259857959256206",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Salary 05/2017",
+                "posted": "2017-05-01T12:02:16Z",
+                "completed": "2017-05-01T12:02:16Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "76799.39"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "5471.22"
+                }
+            }
+        },
+        {
+            "id": "a212a0fd-038b-0680-e222-e350e61ed5f0",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "e891748d-031b-4b33-9d5e-71531d1d801c",
+                "holder": {
+                    "name": "E-Fryzjer"
+                },
+                "number": "30",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL33970734925987070809617458",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "E-Fryzjer shopping.",
+                "posted": "2017-04-30T13:12:02Z",
+                "completed": "2017-04-30T13:12:02Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71328.17"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-38.87"
+                }
+            }
+        },
+        {
+            "id": "be3f79c6-5967-935a-b53b-491aae2748b3",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "2477e7a1-c492-4e86-89ea-8ef8c4f0be83",
+                "holder": {
+                    "name": "Krzysztof Nowak"
+                },
+                "number": "44",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL92834762390475842059181069",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Small loan",
+                "posted": "2017-04-29T15:20:52Z",
+                "completed": "2017-04-29T15:20:52Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71367.04"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-106.45"
+                }
+            }
+        },
+        {
+            "id": "e67ddb89-eceb-157b-8055-2ca5a5ecd87e",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "32569a6a-bcb2-49d9-af65-642adc7dd3d2",
+                "holder": {
+                    "name": "Biedronka"
+                },
+                "number": "5",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL15575275287655328943019312",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Biedronka shopping.",
+                "posted": "2017-04-29T13:43:23Z",
+                "completed": "2017-04-29T13:43:23Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71473.49"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-66.04"
+                }
+            }
+        },
+        {
+            "id": "84be61be-0489-a21d-3352-924497db6dce",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-04-28T13:40:32Z",
+                "completed": "2017-04-28T13:40:32Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71539.53"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-105.70"
+                }
+            }
+        },
+        {
+            "id": "2e04b033-a47e-8794-3b5c-81a21f9ad417",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fea3d6ec-63a6-4654-9745-bef615b664b7",
+                "holder": {
+                    "name": "X-Kom"
+                },
+                "number": "27",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL28121691208275546242313594",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "X-Kom shopping.",
+                "posted": "2017-04-27T13:43:48Z",
+                "completed": "2017-04-27T13:43:48Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71645.23"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-75.90"
+                }
+            }
+        },
+        {
+            "id": "0e063172-549c-f534-6cb9-8d823acb8aeb",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-04-26T13:56:33Z",
+                "completed": "2017-04-26T13:56:33Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71721.13"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-100.93"
+                }
+            }
+        },
+        {
+            "id": "7913aeda-c937-6660-7307-4640080ad919",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "64dcd3ac-3e52-4511-9675-47d723ddf511",
+                "holder": {
+                    "name": "Douglas"
+                },
+                "number": "17",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL02117440393207002931007399",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Douglas shopping.",
+                "posted": "2017-04-25T13:47:04Z",
+                "completed": "2017-04-25T13:47:04Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71822.06"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-109.54"
+                }
+            }
+        },
+        {
+            "id": "a1c53538-5e77-bb09-fc5f-8519f65a3d9b",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "447e6e2a-224c-412d-8ae7-3d2015b8200f",
+                "holder": {
+                    "name": "Mediamarkt.pl"
+                },
+                "number": "15",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL79243983923619387961339983",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Mediamarkt.pl shopping.",
+                "posted": "2017-04-24T13:50:17Z",
+                "completed": "2017-04-24T13:50:17Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71931.60"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-60.76"
+                }
+            }
+        },
+        {
+            "id": "2246c282-2ad9-688b-55cc-f5d45054a4e4",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "61285f97-d328-463c-9f91-5ec8c75e29d3",
+                "holder": {
+                    "name": "Cefarm25"
+                },
+                "number": "12",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL77307311081733154142487791",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Cefarm25 shopping.",
+                "posted": "2017-04-22T13:14:36Z",
+                "completed": "2017-04-22T13:14:36Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "71992.36"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-78.51"
+                }
+            }
+        },
+        {
+            "id": "034421e4-ba9e-46c6-e12e-7e36d121d5d3",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "a7903720-59c0-4e4b-89e7-4eb7b8a0cfb5",
+                "holder": {
+                    "name": "Cinema City"
+                },
+                "number": "21",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL65368594070112952503466791",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Cinema City shopping.",
+                "posted": "2017-04-21T13:10:50Z",
+                "completed": "2017-04-21T13:10:50Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72070.87"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-23.38"
+                }
+            }
+        },
+        {
+            "id": "208b7f25-e3d8-fb9d-7bb7-4abe2d1bcc8c",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-04-20T13:16:36Z",
+                "completed": "2017-04-20T13:16:36Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72094.25"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-20.10"
+                }
+            }
+        },
+        {
+            "id": "b7e6a479-5344-d183-adef-84f6c37cbf4d",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "447e6e2a-224c-412d-8ae7-3d2015b8200f",
+                "holder": {
+                    "name": "Mediamarkt.pl"
+                },
+                "number": "15",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL79243983923619387961339983",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Mediamarkt.pl shopping.",
+                "posted": "2017-04-19T13:47:37Z",
+                "completed": "2017-04-19T13:47:37Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72114.35"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-89.03"
+                }
+            }
+        },
+        {
+            "id": "bf73bfd5-db0f-63bc-d574-c6bf8e7ed601",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "0a4eccfd-05bf-4733-a837-67866eb2c9dd",
+                "holder": {
+                    "name": "Marek Szewczyk"
+                },
+                "number": "41",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL85795225399084981471287137",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Extortion",
+                "posted": "2017-04-18T15:22:16Z",
+                "completed": "2017-04-18T15:22:16Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72203.38"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-96.63"
+                }
+            }
+        },
+        {
+            "id": "a70cb6a4-d7d6-e7e3-d76f-40b665691416",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "a7903720-59c0-4e4b-89e7-4eb7b8a0cfb5",
+                "holder": {
+                    "name": "Cinema City"
+                },
+                "number": "21",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL65368594070112952503466791",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Cinema City shopping.",
+                "posted": "2017-04-18T13:46:54Z",
+                "completed": "2017-04-18T13:46:54Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72300.01"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-106.75"
+                }
+            }
+        },
+        {
+            "id": "e14d9cc3-1e65-fb93-4b42-88c9cd2a4e6e",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "7d2ac292-2632-43b5-8df5-8a22358c6db3",
+                "holder": {
+                    "name": "Świat Alkoholi"
+                },
+                "number": "32",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL37978762170135820025946301",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Świat Alkoholi shopping.",
+                "posted": "2017-04-17T13:53:42Z",
+                "completed": "2017-04-17T13:53:42Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72406.76"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-114.25"
+                }
+            }
+        },
+        {
+            "id": "06872913-f968-cdf3-1ea5-d9e65bd8dbe2",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "a7903720-59c0-4e4b-89e7-4eb7b8a0cfb5",
+                "holder": {
+                    "name": "Cinema City"
+                },
+                "number": "21",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL65368594070112952503466791",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Cinema City shopping.",
+                "posted": "2017-04-16T13:42:31Z",
+                "completed": "2017-04-16T13:42:31Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72521.01"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-39.50"
+                }
+            }
+        },
+        {
+            "id": "d00d4b1b-2450-b4f2-3eec-b08337ce4d2f",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-04-15T13:51:04Z",
+                "completed": "2017-04-15T13:51:04Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72560.51"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-98.59"
+                }
+            }
+        },
+        {
+            "id": "7a5bee60-8b8c-b910-f064-96316a802c18",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "cc26a469-92ad-4576-bf11-93758074359a",
+                "holder": {
+                    "name": "Empik"
+                },
+                "number": "19",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL97558026942081524290435758",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Empik shopping.",
+                "posted": "2017-04-14T13:42:35Z",
+                "completed": "2017-04-14T13:42:35Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72659.10"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-82.37"
+                }
+            }
+        },
+        {
+            "id": "c74aa420-13f2-bc41-90c0-1e960b12bc82",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fb010640-089d-4fc6-a6ea-95d2fe78193b",
+                "holder": {
+                    "name": "Żabka"
+                },
+                "number": "8",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48113719503401719804856593",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Żabka shopping.",
+                "posted": "2017-04-12T13:14:48Z",
+                "completed": "2017-04-12T13:14:48Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72741.47"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-94.42"
+                }
+            }
+        },
+        {
+            "id": "9c09ff98-8653-4382-cad8-a42494f174c2",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "cc26a469-92ad-4576-bf11-93758074359a",
+                "holder": {
+                    "name": "Empik"
+                },
+                "number": "19",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL97558026942081524290435758",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Empik shopping.",
+                "posted": "2017-04-11T13:18:10Z",
+                "completed": "2017-04-11T13:18:10Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72835.89"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-73.80"
+                }
+            }
+        },
+        {
+            "id": "5ec1defe-7a06-1c74-6ff7-490569b15a5d",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "8f7ec8a7-b0a9-46de-87c7-e2d9b2b2b58a",
+                "holder": {
+                    "name": "Saturn"
+                },
+                "number": "26",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL94409517989926221230940345",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Saturn shopping.",
+                "posted": "2017-04-10T13:17:04Z",
+                "completed": "2017-04-10T13:17:04Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72909.69"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-65.04"
+                }
+            }
+        },
+        {
+            "id": "077fa982-6fc5-5a24-bd1f-60c428980bf8",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "5c1ef7f7-5164-437a-942f-bcc44219bfa1",
+                "holder": {
+                    "name": "Dawid Morawski"
+                },
+                "number": "45",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL48572836594474284249850912",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "1kg enriched uranium",
+                "posted": "2017-04-09T15:26:02Z",
+                "completed": "2017-04-09T15:26:02Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "72974.73"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-196.71"
+                }
+            }
+        },
+        {
+            "id": "12e585df-549e-0eef-e550-5b9c42c2071e",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "32569a6a-bcb2-49d9-af65-642adc7dd3d2",
+                "holder": {
+                    "name": "Biedronka"
+                },
+                "number": "5",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL15575275287655328943019312",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Biedronka shopping.",
+                "posted": "2017-04-09T13:42:48Z",
+                "completed": "2017-04-09T13:42:48Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73171.44"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-28.02"
+                }
+            }
+        },
+        {
+            "id": "d6377f06-f6ee-2fc1-32b7-2929248d3a0f",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "32569a6a-bcb2-49d9-af65-642adc7dd3d2",
+                "holder": {
+                    "name": "Biedronka"
+                },
+                "number": "5",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL15575275287655328943019312",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Biedronka shopping.",
+                "posted": "2017-04-08T13:42:13Z",
+                "completed": "2017-04-08T13:42:13Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73199.46"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-50.02"
+                }
+            }
+        },
+        {
+            "id": "76c34ad6-7e2a-280f-81a7-82e57b13a910",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "fbe5a3b4-2934-4b43-9f03-bac95c626945",
+                "holder": {
+                    "name": "Restauracja Złoty Osioł"
+                },
+                "number": "2",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL17021518430953248427823216",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Restauracja Złoty Osioł dinner.",
+                "posted": "2017-04-07T13:54:30Z",
+                "completed": "2017-04-07T13:54:30Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73249.48"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-20.83"
+                }
+            }
+        },
+        {
+            "id": "ebe74041-059b-daac-c3b8-54ba1d683090",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "64dcd3ac-3e52-4511-9675-47d723ddf511",
+                "holder": {
+                    "name": "Douglas"
+                },
+                "number": "17",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL02117440393207002931007399",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Debit Card",
+                "description": "Douglas shopping.",
+                "posted": "2017-04-06T13:47:07Z",
+                "completed": "2017-04-06T13:47:07Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73270.31"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-26.06"
+                }
+            }
+        },
+        {
+            "id": "2efcc5f7-1c9f-a6d6-cd9c-dfa91556b191",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "8f7ec8a7-b0a9-46de-87c7-e2d9b2b2b58a",
+                "holder": {
+                    "name": "Saturn"
+                },
+                "number": "26",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL94409517989926221230940345",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "The Bank Of Gringotts"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Saturn shopping.",
+                "posted": "2017-04-05T13:48:06Z",
+                "completed": "2017-04-05T13:48:06Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73296.37"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-72.98"
+                }
+            }
+        },
+        {
+            "id": "be20fb3e-a9b7-7fa4-33b8-713a08f4fd19",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "c071375e-bf28-46e0-b951-d4b54e89fe6a",
+                "holder": {
+                    "name": "Spółdzielnia Mieszkaniowa KSM"
+                },
+                "number": "14",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL40810333307137683484976571",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Water 04/2017",
+                "posted": "2017-04-05T12:09:00Z",
+                "completed": "2017-04-05T12:09:00Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73369.35"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-95.85"
+                }
+            }
+        },
+        {
+            "id": "d843a6e9-2569-4200-5741-3255cea1911f",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "f0b7d181-0aae-41df-8d4b-5fb77fba36b8",
+                "holder": {
+                    "name": "PGNIG S.A."
+                },
+                "number": "13",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL70938618941990086049419613",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Gas payment 04/2017",
+                "posted": "2017-04-05T12:06:55Z",
+                "completed": "2017-04-05T12:06:55Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73465.20"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-48.56"
+                }
+            }
+        },
+        {
+            "id": "f9d79a0b-8a46-9554-96c0-7818ba717737",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "c071375e-bf28-46e0-b951-d4b54e89fe6a",
+                "holder": {
+                    "name": "Spółdzielnia Mieszkaniowa KSM"
+                },
+                "number": "14",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL40810333307137683484976571",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "Gotham City Bank"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Monthly rent 04/2017",
+                "posted": "2017-04-05T12:06:04Z",
+                "completed": "2017-04-05T12:06:04Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73513.76"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-314.88"
+                }
+            }
+        },
+        {
+            "id": "75a36494-927c-d95f-fb54-546d52794ea1",
+            "account": {
+                "id": "03209146-cdf2-8147-b301-45f7e06182ba",
+                "holders": [
+                    {
+                        "name": "Tadeusz Piotrowski",
+                        "is_alias": false
+                    }
+                ],
+                "number": "38",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL57357205642168092783400779",
+                "swift_bic": " ",
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "counterparty": {
+                "id": "6d108d07-5226-44ef-9e5f-5c4df62d1193",
+                "holder": {
+                    "name": "TAURON Polska Energia S.A."
+                },
+                "number": "10",
+                "kind": "CURRENT PLUS",
+                "IBAN": "PL64534812577919012677307687",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": "PL",
+                    "name": "ING Bank Śląski"
+                }
+            },
+            "details": {
+                "type": "Transfer",
+                "description": "Electricity bill",
+                "posted": "2017-04-05T12:04:56Z",
+                "completed": "2017-04-05T12:04:56Z",
+                "new_balance": {
+                    "currency": "EUR",
+                    "amount": "73828.64"
+                },
+                "value": {
+                    "currency": "EUR",
+                    "amount": "-57.49"
+                }
+            }
+        }
+    ]
+}

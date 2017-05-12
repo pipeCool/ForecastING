@@ -21,4 +21,4 @@ import { MockLanguageService } from './helpers/mock-language.service';
         }
     ]
 })
-export class JhipsterSampleApplicationNg2TestModule {}
+export class Interhyp4HackathonTestModule {}

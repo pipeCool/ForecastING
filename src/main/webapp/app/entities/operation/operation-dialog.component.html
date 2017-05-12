@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myOperationLabel" jhiTranslate="jhipsterSampleApplicationNg2App.operation.home.createOrEditLabel">Create or edit a Operation</h4>
+        <h4 class="modal-title" id="myOperationLabel" jhiTranslate="interhyp4HackathonApp.operation.home.createOrEditLabel">Create or edit a Operation</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="operation.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.operation.date" for="field_date">Date</label>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.operation.date" for="field_date">Date</label>
             <div class="d-flex">
                 <input id="field_date" type="datetime-local" class="form-control" name="date" [(ngModel)]="operation.date"
                 required  />
@@ -30,13 +30,13 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.operation.description" for="field_description">Description</label>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.operation.description" for="field_description">Description</label>
             <input type="text" class="form-control" name="description" id="field_description"
                 [(ngModel)]="operation.description"
              />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.operation.amount" for="field_amount">Amount</label>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.operation.amount" for="field_amount">Amount</label>
             <input type="number" class="form-control" name="amount" id="field_amount"
                 [(ngModel)]="operation.amount"
             required />
@@ -53,14 +53,14 @@
         </div>
 
         <div class="form-group">
-            <label jhiTranslate="jhipsterSampleApplicationNg2App.operation.bankAccount" for="field_bankAccount">Bank Account</label>
+            <label jhiTranslate="interhyp4HackathonApp.operation.bankAccount" for="field_bankAccount">Bank Account</label>
             <select class="form-control" id="field_bankAccount" name="bankAccount" [(ngModel)]="operation.bankAccount" >
                 <option [ngValue]="null"></option>
                 <option [ngValue]="bankAccountOption.id === operation.bankAccount?.id ? operation.bankAccount : bankAccountOption" *ngFor="let bankAccountOption of bankaccounts; trackBy: trackBankAccountById">{{bankAccountOption.name}}</option>
             </select>
         </div>
         <div class="form-group">
-            <label jhiTranslate="jhipsterSampleApplicationNg2App.operation.label" for="field_label">Label</label>
+            <label jhiTranslate="interhyp4HackathonApp.operation.label" for="field_label">Label</label>
             <select class="form-control" id="field_label" multiple name="label" [(ngModel)]="operation.labels">
                 <option [ngValue]="getSelected(operation.labels, labelOption)" *ngFor="let labelOption of labels; trackBy: trackLabelById">{{labelOption.label}}</option>
             </select>

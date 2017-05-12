@@ -1,0 +1,10 @@
+{
+    "interhyp4HackathonApp": {
+        "TransactionStatus" : {
+            "null": "",
+            "FIXED": "FIXED",
+            "PENDING": "PENDING",
+            "PREDICTED": "PREDICTED"
+        }
+    }
+}

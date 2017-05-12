@@ -3,7 +3,7 @@ import { Renderer, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { JhiLanguageService } from 'ng-jhipster';
 import { MockLanguageService } from '../../../helpers/mock-language.service';
-import { JhipsterSampleApplicationNg2TestModule } from '../../../test.module';
+import { Interhyp4HackathonTestModule } from '../../../test.module';
 import { LoginModalService } from '../../../../../../main/webapp/app/shared';
 import { Register } from '../../../../../../main/webapp/app/account/register/register.service';
 import { RegisterComponent } from '../../../../../../main/webapp/app/account/register/register.component';
@@ -17,7 +17,7 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [JhipsterSampleApplicationNg2TestModule],
+                imports: [Interhyp4HackathonTestModule],
                 declarations: [RegisterComponent],
                 providers: [
                     Register,

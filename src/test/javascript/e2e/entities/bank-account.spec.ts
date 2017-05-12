@@ -24,7 +24,7 @@ describe('BankAccount e2e test', () => {
     it('should load BankAccounts', () => {
         entityMenu.click();
         element.all(by.css('[routerLink="bank-account"]')).first().click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.bankAccount.home.title/;
+            const expectVal = /interhyp4HackathonApp.bankAccount.home.title/;
             element.all(by.css('h2 span')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });
@@ -33,7 +33,7 @@ describe('BankAccount e2e test', () => {
 
     it('should load create BankAccount dialog', function () {
         element(by.css('button.create-bank-account')).click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.bankAccount.home.createOrEditLabel/;
+            const expectVal = /interhyp4HackathonApp.bankAccount.home.createOrEditLabel/;
             element.all(by.css('h4.modal-title')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });

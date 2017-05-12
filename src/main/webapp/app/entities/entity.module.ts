@@ -1,15 +1,19 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { JhipsterSampleApplicationNg2BankAccountModule } from './bank-account/bank-account.module';
-import { JhipsterSampleApplicationNg2LabelModule } from './label/label.module';
-import { JhipsterSampleApplicationNg2OperationModule } from './operation/operation.module';
+import { Interhyp4HackathonLabelModule } from './label/label.module';
+import { Interhyp4HackathonOperationModule } from './operation/operation.module';
+import { Interhyp4HackathonBankAccountModule } from './bank-account/bank-account.module';
+import { Interhyp4HackathonTransactionMySuffixModule } from './transaction/transaction-my-suffix.module';
+import { Interhyp4HackathonLocationMySuffixModule } from './location/location-my-suffix.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
     imports: [
-        JhipsterSampleApplicationNg2BankAccountModule,
-        JhipsterSampleApplicationNg2LabelModule,
-        JhipsterSampleApplicationNg2OperationModule,
+        Interhyp4HackathonLabelModule,
+        Interhyp4HackathonOperationModule,
+        Interhyp4HackathonBankAccountModule,
+        Interhyp4HackathonTransactionMySuffixModule,
+        Interhyp4HackathonLocationMySuffixModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],
@@ -17,4 +21,4 @@ import { JhipsterSampleApplicationNg2OperationModule } from './operation/operati
     providers: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JhipsterSampleApplicationNg2EntityModule {}
+export class Interhyp4HackathonEntityModule {}

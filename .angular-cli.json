@@ -1,7 +1,7 @@
 {
     "project": {
         "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-        "name": "jhipster-sample-application-ng-2"
+        "name": "interhyp-4-hackathon"
     },
     "apps": [{
         "root": "src/main/webapp/",

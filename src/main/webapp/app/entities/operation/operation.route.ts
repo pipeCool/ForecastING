@@ -17,7 +17,7 @@ export const operationRoute: Routes = [
         component: OperationComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.operation.home.title'
+            pageTitle: 'interhyp4HackathonApp.operation.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -25,7 +25,7 @@ export const operationRoute: Routes = [
         component: OperationDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.operation.home.title'
+            pageTitle: 'interhyp4HackathonApp.operation.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -37,7 +37,7 @@ export const operationPopupRoute: Routes = [
         component: OperationPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.operation.home.title'
+            pageTitle: 'interhyp4HackathonApp.operation.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -47,7 +47,7 @@ export const operationPopupRoute: Routes = [
         component: OperationPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.operation.home.title'
+            pageTitle: 'interhyp4HackathonApp.operation.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const operationPopupRoute: Routes = [
         component: OperationDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.operation.home.title'
+            pageTitle: 'interhyp4HackathonApp.operation.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

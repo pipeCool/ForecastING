@@ -1,5 +1,5 @@
 {
-    "jhipsterSampleApplicationNg2App": {
+    "interhyp4HackathonApp": {
         "bankAccount" : {
             "home": {
                 "title": "BankAccounts",
@@ -15,10 +15,11 @@
             "detail": {
                 "title": "Bank Account"
             },
-            "name": "Name",
-            "balance": "Balance",
-            "user": "User",
-            "operation": "Operation"
+            "iban": "Iban",
+            "bank": "Bank",
+            "currentAmount": "Current Amount",
+            "transaction": "Transaction",
+            "user": "User"
         }
     }
 }

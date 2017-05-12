@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myBankAccountLabel" jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.home.createOrEditLabel">Create or edit a Bank Account</h4>
+        <h4 class="modal-title" id="myBankAccountLabel" jhiTranslate="interhyp4HackathonApp.bankAccount.home.createOrEditLabel">Create or edit a Bank Account</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,36 +13,26 @@
                    [(ngModel)]="bankAccount.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                [(ngModel)]="bankAccount.name"
-            required />
-            <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
-                <small class="form-text text-danger"
-                   [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
-                   This field is required.
-                </small>
-            </div>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.iban" for="field_iban">Iban</label>
+            <input type="text" class="form-control" name="iban" id="field_iban"
+                [(ngModel)]="bankAccount.iban"
+             />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.balance" for="field_balance">Balance</label>
-            <input type="number" class="form-control" name="balance" id="field_balance"
-                [(ngModel)]="bankAccount.balance"
-            required />
-            <div [hidden]="!(editForm.controls.balance?.dirty && editForm.controls.balance?.invalid)">
-                <small class="form-text text-danger"
-                   [hidden]="!editForm.controls.balance?.errors?.required" jhiTranslate="entity.validation.required">
-                   This field is required.
-                </small>
-                <small class="form-text text-danger"
-                    [hidden]="!editForm.controls.balance?.errors?.number" jhiTranslate="entity.validation.number">
-                    This field should be a number.
-                </small>
-            </div>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.bank" for="field_bank">Bank</label>
+            <input type="text" class="form-control" name="bank" id="field_bank"
+                [(ngModel)]="bankAccount.bank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.currentAmount" for="field_currentAmount">Current Amount</label>
+            <input type="number" class="form-control" name="currentAmount" id="field_currentAmount"
+                [(ngModel)]="bankAccount.currentAmount"
+             />
         </div>
 
         <div class="form-group">
-            <label jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.user" for="field_user">User</label>
+            <label jhiTranslate="interhyp4HackathonApp.bankAccount.user" for="field_user">User</label>
             <select class="form-control" id="field_user" name="user" [(ngModel)]="bankAccount.user" >
                 <option [ngValue]="null"></option>
                 <option [ngValue]="userOption.id === bankAccount.user?.id ? bankAccount.user : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.login}}</option>

@@ -17,7 +17,7 @@ export const labelRoute: Routes = [
         component: LabelComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.label.home.title'
+            pageTitle: 'interhyp4HackathonApp.label.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -25,7 +25,7 @@ export const labelRoute: Routes = [
         component: LabelDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.label.home.title'
+            pageTitle: 'interhyp4HackathonApp.label.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -37,7 +37,7 @@ export const labelPopupRoute: Routes = [
         component: LabelPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.label.home.title'
+            pageTitle: 'interhyp4HackathonApp.label.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -47,7 +47,7 @@ export const labelPopupRoute: Routes = [
         component: LabelPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.label.home.title'
+            pageTitle: 'interhyp4HackathonApp.label.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const labelPopupRoute: Routes = [
         component: LabelDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.label.home.title'
+            pageTitle: 'interhyp4HackathonApp.label.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

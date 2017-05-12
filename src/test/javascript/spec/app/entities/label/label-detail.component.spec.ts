@@ -4,7 +4,7 @@ import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { DateUtils, DataUtils, EventManager } from 'ng-jhipster';
-import { JhipsterSampleApplicationNg2TestModule } from '../../../test.module';
+import { Interhyp4HackathonTestModule } from '../../../test.module';
 import { MockActivatedRoute } from '../../../helpers/mock-route.service';
 import { LabelDetailComponent } from '../../../../../../main/webapp/app/entities/label/label-detail.component';
 import { LabelService } from '../../../../../../main/webapp/app/entities/label/label.service';
@@ -19,7 +19,7 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [JhipsterSampleApplicationNg2TestModule],
+                imports: [Interhyp4HackathonTestModule],
                 declarations: [LabelDetailComponent],
                 providers: [
                     DateUtils,

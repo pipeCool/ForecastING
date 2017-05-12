@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { JhipsterSampleApplicationNg2SharedModule, UserRouteAccessService } from './shared';
-import { JhipsterSampleApplicationNg2HomeModule } from './home/home.module';
-import { JhipsterSampleApplicationNg2AdminModule } from './admin/admin.module';
-import { JhipsterSampleApplicationNg2AccountModule } from './account/account.module';
-import { JhipsterSampleApplicationNg2EntityModule } from './entities/entity.module';
+import { Interhyp4HackathonSharedModule, UserRouteAccessService } from './shared';
+import { Interhyp4HackathonHomeModule } from './home/home.module';
+import { Interhyp4HackathonAdminModule } from './admin/admin.module';
+import { Interhyp4HackathonAccountModule } from './account/account.module';
+import { Interhyp4HackathonEntityModule } from './entities/entity.module';
 import { JhipsterSampleApplicationNg2CalendarModule } from './calendar/calendar.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
@@ -30,11 +30,11 @@ import {
         BrowserModule,
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
-        JhipsterSampleApplicationNg2SharedModule,
-        JhipsterSampleApplicationNg2HomeModule,
-        JhipsterSampleApplicationNg2AdminModule,
-        JhipsterSampleApplicationNg2AccountModule,
-        JhipsterSampleApplicationNg2EntityModule,
+        Interhyp4HackathonSharedModule,
+        Interhyp4HackathonHomeModule,
+        Interhyp4HackathonAdminModule,
+        Interhyp4HackathonAccountModule,
+        Interhyp4HackathonEntityModule,
         JhipsterSampleApplicationNg2CalendarModule
     ],
     declarations: [
@@ -53,4 +53,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class JhipsterSampleApplicationNg2AppModule {}
+export class Interhyp4HackathonAppModule {}

@@ -1,9 +1,9 @@
 <div>
     <h2>
-        <span jhiTranslate="jhipsterSampleApplicationNg2App.operation.home.title">Operations</span>
+        <span jhiTranslate="interhyp4HackathonApp.operation.home.title">Operations</span>
         <button class="btn btn-primary float-right create-operation" [routerLink]="['/', { outlets: { popup: ['operation-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span  jhiTranslate="jhipsterSampleApplicationNg2App.operation.home.createLabel">
+            <span  jhiTranslate="interhyp4HackathonApp.operation.home.createLabel">
             Create new Operation
             </span>
         </button>
@@ -17,10 +17,10 @@
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="date"><span jhiTranslate="jhipsterSampleApplicationNg2App.operation.date">Date</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="description"><span jhiTranslate="jhipsterSampleApplicationNg2App.operation.description">Description</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="amount"><span jhiTranslate="jhipsterSampleApplicationNg2App.operation.amount">Amount</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="bankAccount.name"><span jhiTranslate="jhipsterSampleApplicationNg2App.operation.bankAccount">Bank Account</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="date"><span jhiTranslate="interhyp4HackathonApp.operation.date">Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="description"><span jhiTranslate="interhyp4HackathonApp.operation.description">Description</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="amount"><span jhiTranslate="interhyp4HackathonApp.operation.amount">Amount</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="bankAccount.name"><span jhiTranslate="interhyp4HackathonApp.operation.bankAccount">Bank Account</span> <span class="fa fa-sort"></span></th>
             <th></th>
             </tr>
             </thead>

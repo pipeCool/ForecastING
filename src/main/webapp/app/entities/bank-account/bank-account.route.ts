@@ -17,7 +17,7 @@ export const bankAccountRoute: Routes = [
         component: BankAccountComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.bankAccount.home.title'
+            pageTitle: 'interhyp4HackathonApp.bankAccount.home.title'
         },
         canActivate: [UserRouteAccessService]
     }, {
@@ -25,7 +25,7 @@ export const bankAccountRoute: Routes = [
         component: BankAccountDetailComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.bankAccount.home.title'
+            pageTitle: 'interhyp4HackathonApp.bankAccount.home.title'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -37,7 +37,7 @@ export const bankAccountPopupRoute: Routes = [
         component: BankAccountPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.bankAccount.home.title'
+            pageTitle: 'interhyp4HackathonApp.bankAccount.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -47,7 +47,7 @@ export const bankAccountPopupRoute: Routes = [
         component: BankAccountPopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.bankAccount.home.title'
+            pageTitle: 'interhyp4HackathonApp.bankAccount.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'
@@ -57,7 +57,7 @@ export const bankAccountPopupRoute: Routes = [
         component: BankAccountDeletePopupComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'jhipsterSampleApplicationNg2App.bankAccount.home.title'
+            pageTitle: 'interhyp4HackathonApp.bankAccount.home.title'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

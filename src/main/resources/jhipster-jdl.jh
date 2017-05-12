@@ -1,0 +1,48 @@
+entity FCUser {
+	name String,
+    login String required
+}
+
+entity FCBankAccount {
+	iban String,
+    bank String,
+    currentAmount Double
+}
+
+entity Transaction {
+	date ZonedDateTime,
+    amount Double,
+    status TransactionStatus
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+    latitude String,
+    longitude String
+}
+
+enum TransactionStatus {
+    FIXED, PENDING, PREDICTED
+}
+
+relationship OneToMany {
+	FCUser{bankaccount} to FCBankAccount{user}
+}
+
+relationship OneToMany {
+	FCBankAccount{transaction} to Transaction{bankaccount}
+}
+
+relationship ManyToOne {
+	Transaction{location} to Location
+}
+
+// Set pagination options
+paginate Transaction with infinite-scroll
+//paginate Job with pagination
+
