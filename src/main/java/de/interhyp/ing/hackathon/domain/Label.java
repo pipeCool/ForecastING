@@ -11,11 +11,9 @@ import java.util.Objects;
 
 /**
  * A Label.
- * @deprecated only keep as example
  */
 @Entity
 @Table(name = "label")
-@Deprecated
 public class Label implements Serializable {
 
     private static final long serialVersionUID = 1L;

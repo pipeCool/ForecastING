@@ -19,7 +19,6 @@ import java.util.Optional;
 
 /**
  * REST controller for managing Label.
- * @deprecated only keep as example
  */
 @RestController
 @RequestMapping("/api")
@@ -28,7 +27,7 @@ public class LabelResource {
     private final Logger log = LoggerFactory.getLogger(LabelResource.class);
 
     private static final String ENTITY_NAME = "label";
-
+        
     private final LabelRepository labelRepository;
 
     public LabelResource(LabelRepository labelRepository) {

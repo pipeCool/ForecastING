@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * Spring Data JPA repository for the Operation entity.
- * @deprecated only keep as example
  */
 @SuppressWarnings("unused")
 public interface OperationRepository extends JpaRepository<Operation,Long> {

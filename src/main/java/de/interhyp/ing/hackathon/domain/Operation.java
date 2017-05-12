@@ -12,11 +12,9 @@ import java.util.Objects;
 
 /**
  * A Operation.
- * @deprecated only keep as example
  */
 @Entity
 @Table(name = "operation")
-@Deprecated
 public class Operation implements Serializable {
 
     private static final long serialVersionUID = 1L;

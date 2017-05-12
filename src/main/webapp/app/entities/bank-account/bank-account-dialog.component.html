@@ -13,32 +13,22 @@
                    [(ngModel)]="bankAccount.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.name" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
-                [(ngModel)]="bankAccount.name"
-            required />
-            <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
-                <small class="form-text text-danger"
-                   [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
-                   This field is required.
-                </small>
-            </div>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.iban" for="field_iban">Iban</label>
+            <input type="text" class="form-control" name="iban" id="field_iban"
+                [(ngModel)]="bankAccount.iban"
+             />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.balance" for="field_balance">Balance</label>
-            <input type="number" class="form-control" name="balance" id="field_balance"
-                [(ngModel)]="bankAccount.balance"
-            required />
-            <div [hidden]="!(editForm.controls.balance?.dirty && editForm.controls.balance?.invalid)">
-                <small class="form-text text-danger"
-                   [hidden]="!editForm.controls.balance?.errors?.required" jhiTranslate="entity.validation.required">
-                   This field is required.
-                </small>
-                <small class="form-text text-danger"
-                    [hidden]="!editForm.controls.balance?.errors?.number" jhiTranslate="entity.validation.number">
-                    This field should be a number.
-                </small>
-            </div>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.bank" for="field_bank">Bank</label>
+            <input type="text" class="form-control" name="bank" id="field_bank"
+                [(ngModel)]="bankAccount.bank"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.bankAccount.currentAmount" for="field_currentAmount">Current Amount</label>
+            <input type="number" class="form-control" name="currentAmount" id="field_currentAmount"
+                [(ngModel)]="bankAccount.currentAmount"
+             />
         </div>
 
         <div class="form-group">

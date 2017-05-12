@@ -4,6 +4,7 @@ import de.interhyp.ing.hackathon.Interhyp4HackathonApp;
 
 import de.interhyp.ing.hackathon.domain.BankAccount;
 import de.interhyp.ing.hackathon.repository.BankAccountRepository;
+import de.interhyp.ing.hackathon.service.BankAccountService;
 import de.interhyp.ing.hackathon.web.rest.errors.ExceptionTranslator;
 
 import org.junit.Before;
@@ -21,7 +22,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import java.math.BigDecimal;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -38,14 +38,20 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = Interhyp4HackathonApp.class)
 public class BankAccountResourceIntTest {
 
-    private static final String DEFAULT_NAME = "AAAAAAAAAA";
-    private static final String UPDATED_NAME = "BBBBBBBBBB";
+    private static final String DEFAULT_IBAN = "AAAAAAAAAA";
+    private static final String UPDATED_IBAN = "BBBBBBBBBB";
 
-    private static final BigDecimal DEFAULT_BALANCE = new BigDecimal(1);
-    private static final BigDecimal UPDATED_BALANCE = new BigDecimal(2);
+    private static final String DEFAULT_BANK = "AAAAAAAAAA";
+    private static final String UPDATED_BANK = "BBBBBBBBBB";
+
+    private static final Double DEFAULT_CURRENT_AMOUNT = 1D;
+    private static final Double UPDATED_CURRENT_AMOUNT = 2D;
 
     @Autowired
     private BankAccountRepository bankAccountRepository;
+
+    @Autowired
+    private BankAccountService bankAccountService;
 
     @Autowired
     private MappingJackson2HttpMessageConverter jacksonMessageConverter;
@@ -66,7 +72,7 @@ public class BankAccountResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        BankAccountResource bankAccountResource = new BankAccountResource(bankAccountRepository);
+        BankAccountResource bankAccountResource = new BankAccountResource(bankAccountService);
         this.restBankAccountMockMvc = MockMvcBuilders.standaloneSetup(bankAccountResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
             .setControllerAdvice(exceptionTranslator)
@@ -80,9 +86,10 @@ public class BankAccountResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static BankAccount createEntity(EntityManager em) {
-        BankAccount bankAccount = new BankAccount();
-        bankAccount.setName(DEFAULT_NAME);
-        bankAccount.setBalance(DEFAULT_BALANCE);
+        BankAccount bankAccount = new BankAccount()
+            .iban(DEFAULT_IBAN)
+            .bank(DEFAULT_BANK)
+            .currentAmount(DEFAULT_CURRENT_AMOUNT);
         return bankAccount;
     }
 
@@ -106,8 +113,9 @@ public class BankAccountResourceIntTest {
         List<BankAccount> bankAccountList = bankAccountRepository.findAll();
         assertThat(bankAccountList).hasSize(databaseSizeBeforeCreate + 1);
         BankAccount testBankAccount = bankAccountList.get(bankAccountList.size() - 1);
-        assertThat(testBankAccount.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testBankAccount.getBalance()).isEqualTo(DEFAULT_BALANCE);
+        assertThat(testBankAccount.getIban()).isEqualTo(DEFAULT_IBAN);
+        assertThat(testBankAccount.getBank()).isEqualTo(DEFAULT_BANK);
+        assertThat(testBankAccount.getCurrentAmount()).isEqualTo(DEFAULT_CURRENT_AMOUNT);
     }
 
     @Test
@@ -131,42 +139,6 @@ public class BankAccountResourceIntTest {
 
     @Test
     @Transactional
-    public void checkNameIsRequired() throws Exception {
-        int databaseSizeBeforeTest = bankAccountRepository.findAll().size();
-        // set the field null
-        bankAccount.setName(null);
-
-        // Create the BankAccount, which fails.
-
-        restBankAccountMockMvc.perform(post("/api/bank-accounts")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(bankAccount)))
-            .andExpect(status().isBadRequest());
-
-        List<BankAccount> bankAccountList = bankAccountRepository.findAll();
-        assertThat(bankAccountList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    public void checkBalanceIsRequired() throws Exception {
-        int databaseSizeBeforeTest = bankAccountRepository.findAll().size();
-        // set the field null
-        bankAccount.setBalance(null);
-
-        // Create the BankAccount, which fails.
-
-        restBankAccountMockMvc.perform(post("/api/bank-accounts")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(bankAccount)))
-            .andExpect(status().isBadRequest());
-
-        List<BankAccount> bankAccountList = bankAccountRepository.findAll();
-        assertThat(bankAccountList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     public void getAllBankAccounts() throws Exception {
         // Initialize the database
         bankAccountRepository.saveAndFlush(bankAccount);
@@ -176,8 +148,9 @@ public class BankAccountResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(bankAccount.getId().intValue())))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-            .andExpect(jsonPath("$.[*].balance").value(hasItem(DEFAULT_BALANCE.intValue())));
+            .andExpect(jsonPath("$.[*].iban").value(hasItem(DEFAULT_IBAN.toString())))
+            .andExpect(jsonPath("$.[*].bank").value(hasItem(DEFAULT_BANK.toString())))
+            .andExpect(jsonPath("$.[*].currentAmount").value(hasItem(DEFAULT_CURRENT_AMOUNT.doubleValue())));
     }
 
     @Test
@@ -191,8 +164,9 @@ public class BankAccountResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(bankAccount.getId().intValue()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.balance").value(DEFAULT_BALANCE.intValue()));
+            .andExpect(jsonPath("$.iban").value(DEFAULT_IBAN.toString()))
+            .andExpect(jsonPath("$.bank").value(DEFAULT_BANK.toString()))
+            .andExpect(jsonPath("$.currentAmount").value(DEFAULT_CURRENT_AMOUNT.doubleValue()));
     }
 
     @Test
@@ -207,13 +181,16 @@ public class BankAccountResourceIntTest {
     @Transactional
     public void updateBankAccount() throws Exception {
         // Initialize the database
-        bankAccountRepository.saveAndFlush(bankAccount);
+        bankAccountService.save(bankAccount);
+
         int databaseSizeBeforeUpdate = bankAccountRepository.findAll().size();
 
         // Update the bankAccount
         BankAccount updatedBankAccount = bankAccountRepository.findOne(bankAccount.getId());
-        updatedBankAccount.setName(UPDATED_NAME);
-        updatedBankAccount.setBalance(UPDATED_BALANCE);
+        updatedBankAccount
+            .iban(UPDATED_IBAN)
+            .bank(UPDATED_BANK)
+            .currentAmount(UPDATED_CURRENT_AMOUNT);
 
         restBankAccountMockMvc.perform(put("/api/bank-accounts")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -224,8 +201,9 @@ public class BankAccountResourceIntTest {
         List<BankAccount> bankAccountList = bankAccountRepository.findAll();
         assertThat(bankAccountList).hasSize(databaseSizeBeforeUpdate);
         BankAccount testBankAccount = bankAccountList.get(bankAccountList.size() - 1);
-        assertThat(testBankAccount.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testBankAccount.getBalance()).isEqualTo(UPDATED_BALANCE);
+        assertThat(testBankAccount.getIban()).isEqualTo(UPDATED_IBAN);
+        assertThat(testBankAccount.getBank()).isEqualTo(UPDATED_BANK);
+        assertThat(testBankAccount.getCurrentAmount()).isEqualTo(UPDATED_CURRENT_AMOUNT);
     }
 
     @Test
@@ -250,7 +228,8 @@ public class BankAccountResourceIntTest {
     @Transactional
     public void deleteBankAccount() throws Exception {
         // Initialize the database
-        bankAccountRepository.saveAndFlush(bankAccount);
+        bankAccountService.save(bankAccount);
+
         int databaseSizeBeforeDelete = bankAccountRepository.findAll().size();
 
         // Get the bankAccount

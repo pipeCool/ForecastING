@@ -1,39 +1,36 @@
 {
+    "fluentMethods": true,
     "relationships": [
         {
-            "relationshipId": 1,
+            "relationshipType": "one-to-many",
+            "relationshipName": "transaction",
+            "otherEntityName": "transaction",
+            "otherEntityRelationshipName": "bankaccount"
+        },
+        {
             "relationshipName": "user",
             "otherEntityName": "user",
             "relationshipType": "many-to-one",
             "otherEntityField": "login"
-        },
-        {
-            "relationshipId": 2,
-            "relationshipName": "operation",
-            "otherEntityName": "operation",
-            "relationshipType": "one-to-many",
-            "otherEntityRelationshipName": "bankAccount"
         }
     ],
     "fields": [
         {
-            "fieldId": 1,
-            "fieldName": "name",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
+            "fieldName": "iban",
+            "fieldType": "String"
         },
         {
-            "fieldId": 2,
-            "fieldName": "balance",
-            "fieldType": "BigDecimal",
-            "fieldValidateRules": [
-                "required"
-            ]
+            "fieldName": "bank",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currentAmount",
+            "fieldType": "Double"
         }
     ],
-    "changelogDate": "20150805124838",
+    "changelogDate": "20170512124046",
+    "entityTableName": "bank_account",
     "dto": "no",
+    "service": "yes",
     "pagination": "no"
 }

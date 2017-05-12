@@ -25,7 +25,6 @@ import java.util.Optional;
 
 /**
  * REST controller for managing Operation.
- * @deprecated only keep as example
  */
 @RestController
 @RequestMapping("/api")
@@ -34,7 +33,7 @@ public class OperationResource {
     private final Logger log = LoggerFactory.getLogger(OperationResource.class);
 
     private static final String ENTITY_NAME = "operation";
-
+        
     private final OperationRepository operationRepository;
 
     public OperationResource(OperationRepository operationRepository) {

@@ -2,8 +2,7 @@ package de.interhyp.ing.hackathon.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import de.interhyp.ing.hackathon.domain.BankAccount;
-
-import de.interhyp.ing.hackathon.repository.BankAccountRepository;
+import de.interhyp.ing.hackathon.service.BankAccountService;
 import de.interhyp.ing.hackathon.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
@@ -11,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -19,7 +17,6 @@ import java.util.Optional;
 
 /**
  * REST controller for managing BankAccount.
- * @deprecated only keep as example
  */
 @RestController
 @RequestMapping("/api")
@@ -28,11 +25,11 @@ public class BankAccountResource {
     private final Logger log = LoggerFactory.getLogger(BankAccountResource.class);
 
     private static final String ENTITY_NAME = "bankAccount";
+        
+    private final BankAccountService bankAccountService;
 
-    private final BankAccountRepository bankAccountRepository;
-
-    public BankAccountResource(BankAccountRepository bankAccountRepository) {
-        this.bankAccountRepository = bankAccountRepository;
+    public BankAccountResource(BankAccountService bankAccountService) {
+        this.bankAccountService = bankAccountService;
     }
 
     /**
@@ -44,12 +41,12 @@ public class BankAccountResource {
      */
     @PostMapping("/bank-accounts")
     @Timed
-    public ResponseEntity<BankAccount> createBankAccount(@Valid @RequestBody BankAccount bankAccount) throws URISyntaxException {
+    public ResponseEntity<BankAccount> createBankAccount(@RequestBody BankAccount bankAccount) throws URISyntaxException {
         log.debug("REST request to save BankAccount : {}", bankAccount);
         if (bankAccount.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new bankAccount cannot already have an ID")).body(null);
         }
-        BankAccount result = bankAccountRepository.save(bankAccount);
+        BankAccount result = bankAccountService.save(bankAccount);
         return ResponseEntity.created(new URI("/api/bank-accounts/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -66,12 +63,12 @@ public class BankAccountResource {
      */
     @PutMapping("/bank-accounts")
     @Timed
-    public ResponseEntity<BankAccount> updateBankAccount(@Valid @RequestBody BankAccount bankAccount) throws URISyntaxException {
+    public ResponseEntity<BankAccount> updateBankAccount(@RequestBody BankAccount bankAccount) throws URISyntaxException {
         log.debug("REST request to update BankAccount : {}", bankAccount);
         if (bankAccount.getId() == null) {
             return createBankAccount(bankAccount);
         }
-        BankAccount result = bankAccountRepository.save(bankAccount);
+        BankAccount result = bankAccountService.save(bankAccount);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, bankAccount.getId().toString()))
             .body(result);
@@ -86,8 +83,7 @@ public class BankAccountResource {
     @Timed
     public List<BankAccount> getAllBankAccounts() {
         log.debug("REST request to get all BankAccounts");
-        List<BankAccount> bankAccounts = bankAccountRepository.findAll();
-        return bankAccounts;
+        return bankAccountService.findAll();
     }
 
     /**
@@ -100,7 +96,7 @@ public class BankAccountResource {
     @Timed
     public ResponseEntity<BankAccount> getBankAccount(@PathVariable Long id) {
         log.debug("REST request to get BankAccount : {}", id);
-        BankAccount bankAccount = bankAccountRepository.findOne(id);
+        BankAccount bankAccount = bankAccountService.findOne(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(bankAccount));
     }
 
@@ -114,7 +110,7 @@ public class BankAccountResource {
     @Timed
     public ResponseEntity<Void> deleteBankAccount(@PathVariable Long id) {
         log.debug("REST request to delete BankAccount : {}", id);
-        bankAccountRepository.delete(id);
+        bankAccountService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 

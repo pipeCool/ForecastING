@@ -1,0 +1,25 @@
+{
+    "interhyp4HackathonApp": {
+        "transaction" : {
+            "home": {
+                "title": "Transactions",
+                "createLabel": "Créer un nouveau Transaction",
+                "createOrEditLabel": "Créer ou éditer un Transaction"
+            },
+            "created": "Un nouveau Transaction a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Transaction avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Transaction avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Transaction {{ id }} ?"
+            },
+            "detail": {
+                "title": "Transaction"
+            },
+            "date": "Date",
+            "amount": "Amount",
+            "status": "Status",
+            "location": "Location",
+            "bankaccount": "Bankaccount"
+        }
+    }
+}

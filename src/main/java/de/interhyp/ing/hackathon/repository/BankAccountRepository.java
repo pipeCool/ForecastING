@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * Spring Data JPA repository for the BankAccount entity.
- * @deprecated only keep as example
  */
 @SuppressWarnings("unused")
 public interface BankAccountRepository extends JpaRepository<BankAccount,Long> {

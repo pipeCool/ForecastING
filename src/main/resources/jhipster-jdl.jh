@@ -3,7 +3,7 @@ entity FCUser {
     login String required
 }
 
-entity Bankaccount {
+entity FCBankAccount {
 	iban String,
     bank String,
     currentAmount Double
@@ -31,11 +31,11 @@ enum TransactionStatus {
 }
 
 relationship OneToMany {
-	FCUser{bankaccount} to Bankaccount
+	FCUser{bankaccount} to FCBankAccount{user}
 }
 
 relationship OneToMany {
-	Bankaccount{transaction} to Transaction
+	FCBankAccount{transaction} to Transaction{bankaccount}
 }
 
 relationship ManyToOne {
@@ -46,9 +46,3 @@ relationship ManyToOne {
 paginate Transaction with infinite-scroll
 //paginate Job with pagination
 
-dto * with mapstruct
-
-// Set service options to all except few
-// service all with serviceImpl except Employee, Job
-// Set an angular suffix
-angularSuffix * with mySuffix

@@ -7,9 +7,11 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
-                "bankAccount": "Bank Account",
                 "label": "Label",
                 "operation": "Operation",
+                "bankAccount": "Bank Account",
+                "transactionMySuffix": "Transaction",
+                "locationMySuffix": "Location",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
