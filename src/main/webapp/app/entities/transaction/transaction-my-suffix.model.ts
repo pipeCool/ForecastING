@@ -5,7 +5,7 @@ const enum TransactionStatus {
     'PREDICTED'
 
 };
-import { Location } from '../location';
+import { LocationMySuffix } from '../location';
 import { BankAccount } from '../bank-account';
 export class TransactionMySuffix {
     constructor(
