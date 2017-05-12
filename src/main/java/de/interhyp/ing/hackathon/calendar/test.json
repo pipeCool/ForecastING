@@ -1,0 +1,97 @@
+{
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "16",
+                    "short_name": "16",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Agricolastraße",
+                    "short_name": "Agricolastraße",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Laim",
+                    "short_name": "Laim",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "München",
+                    "short_name": "München",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Oberbayern",
+                    "short_name": "Oberbayern",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Bayern",
+                    "short_name": "BY",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Germany",
+                    "short_name": "DE",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "80687",
+                    "short_name": "80687",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Agricolastraße 16, 80687 München, Germany",
+            "geometry": {
+                "location": {
+                    "lat": 48.14141000000001,
+                    "lng": 11.49242
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.14275898029151,
+                        "lng": 11.4937689802915
+                    },
+                    "southwest": {
+                        "lat": 48.14006101970851,
+                        "lng": 11.4910710197085
+                    }
+                }
+            },
+            "place_id": "ChIJN55qFn_YnUcRC4in7Kc4SZo",
+            "types": [
+                "bar",
+                "establishment",
+                "food",
+                "point_of_interest",
+                "restaurant"
+            ]
+        }
+    ],
+    "status": "OK"
+}
