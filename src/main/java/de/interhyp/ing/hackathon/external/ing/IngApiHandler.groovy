@@ -151,11 +151,11 @@ class IngApiHandler {
     }
 
     String getLastName(String email) {
-        email.split("\\.").last().split("@").first().toUpperCase()
+        email.split("\\@").first().split("\\.").last().capitalize()
     }
 
     String getFirstName(String email) {
-        email.split("\\.").first().toUpperCase()
+        email.split("\\.").first().capitalize()
     }
 
     private String doCallService(OAuth10aService service, OAuth1AccessToken accessToken, OAuthRequest request, String url) {
