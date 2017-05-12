@@ -26,7 +26,7 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:file:./target/h2db/db/interhyp4hackathon;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:file:./target/h2db/db/interhyp4hackathon;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
         username: interhyp4hackathon
         password:
     h2:
