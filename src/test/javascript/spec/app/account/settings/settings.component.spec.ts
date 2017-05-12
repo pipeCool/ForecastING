@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { Observable } from 'rxjs/Rx';
 import { JhiLanguageHelper } from '../../../../../../main/webapp/app/shared';
-import { JhipsterSampleApplicationNg2TestModule } from '../../../test.module';
+import { Interhyp4HackathonTestModule } from '../../../test.module';
 import { Principal, AccountService } from '../../../../../../main/webapp/app/shared';
 import { SettingsComponent } from '../../../../../../main/webapp/app/account/settings/settings.component';
 import { MockAccountService } from '../../../helpers/mock-account.service';
@@ -19,7 +19,7 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [JhipsterSampleApplicationNg2TestModule],
+                imports: [Interhyp4HackathonTestModule],
                 declarations: [SettingsComponent],
                 providers: [
                     {

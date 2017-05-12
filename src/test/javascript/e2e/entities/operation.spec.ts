@@ -24,7 +24,7 @@ describe('Operation e2e test', () => {
     it('should load Operations', () => {
         entityMenu.click();
         element.all(by.css('[routerLink="operation"]')).first().click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.operation.home.title/;
+            const expectVal = /interhyp4HackathonApp.operation.home.title/;
             element.all(by.css('h2 span')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });
@@ -33,7 +33,7 @@ describe('Operation e2e test', () => {
 
     it('should load create Operation dialog', function () {
         element(by.css('button.create-operation')).click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.operation.home.createOrEditLabel/;
+            const expectVal = /interhyp4HackathonApp.operation.home.createOrEditLabel/;
             element.all(by.css('h4.modal-title')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });
