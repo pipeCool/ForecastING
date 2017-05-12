@@ -25,4 +25,4 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
         InfiniteScrollModule
     ]
 })
-export class JhipsterSampleApplicationNg2SharedLibsModule {}
+export class Interhyp4HackathonSharedLibsModule {}

@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "4.3.0",
+    "jhipsterVersion": "4.4.1",
     "baseName": "interhyp4hackathon",
     "packageName": "de.interhyp.ing.hackathon",
     "packageFolder": "de/interhyp/ing/hackathon",

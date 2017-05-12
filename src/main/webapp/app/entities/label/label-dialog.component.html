@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myLabelLabel" jhiTranslate="jhipsterSampleApplicationNg2App.label.home.createOrEditLabel">Create or edit a Label</h4>
+        <h4 class="modal-title" id="myLabelLabel" jhiTranslate="interhyp4HackathonApp.label.home.createOrEditLabel">Create or edit a Label</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -13,7 +13,7 @@
                    [(ngModel)]="label.id" readonly />
         </div>
         <div class="form-group">
-            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationNg2App.label.label" for="field_label">Label</label>
+            <label class="form-control-label" jhiTranslate="interhyp4HackathonApp.label.label" for="field_label">Label</label>
             <input type="text" class="form-control" name="label" id="field_label"
                 [(ngModel)]="label.label"
             required minlength="3" />
