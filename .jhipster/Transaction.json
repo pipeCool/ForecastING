@@ -31,8 +31,8 @@
     ],
     "changelogDate": "20170512124047",
     "entityTableName": "transaction",
+    "service": "serviceImpl",
     "dto": "no",
     "pagination": "infinite-scroll",
-    "service": "yes",
     "angularJSSuffix": "mySuffix"
 }

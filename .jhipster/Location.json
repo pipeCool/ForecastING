@@ -30,8 +30,8 @@
     "changelogDate": "20170512124048",
     "javadoc": "not an ignored comment",
     "entityTableName": "location",
+    "service": "serviceImpl",
     "dto": "no",
     "pagination": "no",
-    "service": "yes",
     "angularJSSuffix": "mySuffix"
 }

@@ -30,7 +30,7 @@
     ],
     "changelogDate": "20170512124046",
     "entityTableName": "bank_account",
+    "service": "serviceImpl",
     "dto": "no",
-    "service": "yes",
     "pagination": "no"
 }
