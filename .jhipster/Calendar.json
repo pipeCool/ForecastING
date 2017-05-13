@@ -22,6 +22,10 @@
         {
             "fieldName": "title",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "color",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20170512183413",

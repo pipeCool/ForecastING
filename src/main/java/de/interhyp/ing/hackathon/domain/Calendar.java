@@ -29,6 +29,9 @@ public class Calendar implements Serializable {
     @Column(name = "title")
     private String title;
 
+    @Column(name = "color")
+    private String color;
+
     @OneToOne
     @JoinColumn(unique = true)
     private Location location;
@@ -80,6 +83,19 @@ public class Calendar implements Serializable {
         this.title = title;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public Calendar color(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public Location getLocation() {
         return location;
     }
@@ -120,6 +136,7 @@ public class Calendar implements Serializable {
             ", start='" + getStart() + "'" +
             ", end='" + getEnd() + "'" +
             ", title='" + getTitle() + "'" +
+            ", color='" + getColor() + "'" +
             "}";
     }
 }

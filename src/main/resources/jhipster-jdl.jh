@@ -26,6 +26,13 @@ entity Location {
     longitude String
 }
 
+entity Calendar {
+    start ZonedDateTime,
+    end ZonedDateTime,
+    title String,
+    color String,
+}
+
 enum TransactionStatus {
     FIXED, PENDING, PREDICTED
 }
@@ -41,6 +48,10 @@ relationship OneToMany {
 relationship ManyToOne {
 	Transaction{location} to Location
 }
+
+relationship ManyToOne {
+     Calendar{location} to Location
+ }
 
 // Set pagination options
 paginate Transaction with infinite-scroll

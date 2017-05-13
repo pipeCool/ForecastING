@@ -56,6 +56,7 @@ class IngApiHandler {
 
         //println 'http://bank-api-49.24hcoding.pl/obp/v2.1.0/banks'.toURL().text
         authorizationUrl
+
     }
 
     void handleIt(String id,
