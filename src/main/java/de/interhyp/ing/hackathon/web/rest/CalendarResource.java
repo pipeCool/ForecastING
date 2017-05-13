@@ -79,11 +79,21 @@ public class CalendarResource {
      *
      * @return the ResponseEntity with status 200 (OK) and the list of calendars in body
      */
-    @GetMapping("/calendars")
+    /*@GetMapping("/calendars")
     @Timed
     public List<Calendar> getAllCalendars() {
         log.debug("REST request to get all Calendars");
         return calendarService.findAll();
+    }*/
+
+    @GetMapping("/calendars/{from}/{till}")
+    @Timed
+    public List<Calendar> getSomeCalendars(
+        @RequestParam("from") String from,
+        @RequestParam("till") String till
+    ) {
+        log.debug("REST request to get all Calendars");
+        return calendarService.findSome(from, till);
     }
 
     /**

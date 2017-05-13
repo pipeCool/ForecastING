@@ -1,15 +1,20 @@
 package de.interhyp.ing.hackathon.service.impl;
 
+import de.interhyp.ing.hackathon.calendar.GoogleHandler;
 import de.interhyp.ing.hackathon.service.CalendarService;
 import de.interhyp.ing.hackathon.domain.Calendar;
 import de.interhyp.ing.hackathon.repository.CalendarRepository;
 import de.interhyp.ing.hackathon.service.LocationService;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -58,6 +63,19 @@ public class CalendarServiceImpl implements CalendarService{
         log.debug("Request to get all Calendars");
         List<Calendar> result = calendarRepository.findAll();
 
+        return result;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Calendar> findSome(String from, String till) {
+        log.debug("Request to get all Calendars");
+        List<Calendar> result = null;
+        try {
+            result = new GoogleHandler().requestCalendarEvents (from, till);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return result;
     }
 

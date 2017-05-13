@@ -14,6 +14,8 @@
                 "transactionMySuffix": "Transaction",
                 "locationMySuffix": "Location",
                 "calendar": "Calendar",
+                "transaction": "Transaction",
+                "location": "Location",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

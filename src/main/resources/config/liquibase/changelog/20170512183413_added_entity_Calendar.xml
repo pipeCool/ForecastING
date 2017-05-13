@@ -32,6 +32,10 @@
             <column name="title" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+
+            <column name="color" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="location_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
