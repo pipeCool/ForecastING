@@ -86,7 +86,7 @@ public class CalendarResource {
         return calendarService.findAll();
     }*/
 
-    @GetMapping("/calendars/{from}/{till}")
+    @GetMapping("/calendars")
     @Timed
     public List<Calendar> getSomeCalendars(
         @RequestParam("from") String from,

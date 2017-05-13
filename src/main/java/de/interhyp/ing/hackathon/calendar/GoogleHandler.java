@@ -1,5 +1,7 @@
 package de.interhyp.ing.hackathon.calendar;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.scribejava.apis.google.GoogleJsonTokenExtractor;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
@@ -116,6 +118,7 @@ public class GoogleHandler
                 if (event.getLocation() != null)
                 {
                     Location location = requestLocation(event.getLocation());
+                    element.setLocation(location);
                 }
                 element.setTitle(event.getSummary());
                 result.add (element);
@@ -127,14 +130,47 @@ public class GoogleHandler
 
     Location requestLocation (String locationName)
     {
+        Location result = new Location ();
         try {
             String response = sendGet ("https://maps.googleapis.com/maps/api/geocode/json?address=" + URLEncoder.encode(locationName) + "&key=AIzaSyC72kYRChCmlzea8w4PceCInmmz7neRJkg");
-            response += "";
+            ObjectMapper objectMapper = new ObjectMapper();
+            GoogleLocation googleLocation = objectMapper.readValue(response, GoogleLocation.class);
+            if (googleLocation.getResults().size() == 1) {
+                String street = "";
+                String houseNo = "";
+                String country = "";
+                for (AddressComponent component : googleLocation.getResults().get(0).getAddressComponents()) {
+                    if (component.getTypes().contains("locality"))
+                    {
+                        result.setCity(component.getLongName());
+                    }
+                    else if (component.getTypes().contains("country"))
+                    {
+                        country = component.getLongName();
+                    }
+                    else if (component.getTypes().contains("postal_code"))
+                    {
+                        result.setPostalCode(component.getLongName());
+                    }
+                    else if (component.getTypes().contains("route"))
+                    {
+                        street = component.getLongName();
+                    }
+                    else if (component.getTypes().contains("street_number"))
+                    {
+                        houseNo = component.getLongName();
+                    }
+                }
+                result.setStateProvince(country);
+                result.setStreetAddress(street + " " + houseNo);
+                result.setLatitude("" + googleLocation.getResults().get(0).getGeometry().getLocation().getLat());
+                result.setLongitude("" + googleLocation.getResults().get(0).getGeometry().getLocation().getLng());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return new Location();
+        return result;
     }
 
     private static String sendGet(String url) throws Exception {

@@ -7,12 +7,12 @@ import com.github.scribejava.core.model.OAuthRequest
 import com.github.scribejava.core.model.Response
 import com.github.scribejava.core.model.Verb
 import com.github.scribejava.core.oauth.OAuth10aService
-import de.interhyp.ing.hackathon.domain.BankAccount
+import de.interhyp.ing.hackathon.domain.FCBankAccount
 import de.interhyp.ing.hackathon.domain.Transaction
 import de.interhyp.ing.hackathon.domain.User
 import de.interhyp.ing.hackathon.domain.enumeration.TransactionStatus
 import de.interhyp.ing.hackathon.repository.AuthorityRepository
-import de.interhyp.ing.hackathon.repository.BankAccountRepository
+import de.interhyp.ing.hackathon.repository.FCBankAccountRepository
 import de.interhyp.ing.hackathon.repository.TransactionRepository
 import de.interhyp.ing.hackathon.repository.UserRepository
 import groovy.json.JsonSlurper
@@ -62,7 +62,7 @@ class IngApiHandler {
     void handleIt(String id,
                   String token, UserRepository userRepository, PasswordEncoder passwordEncoder,
                   AuthorityRepository authorityRepository,
-                  BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository) {
+                  FCBankAccountRepository bankAccountRepository, TransactionRepository transactionRepository) {
 
         if (service == null) {
             service = new ServiceBuilder()
@@ -111,12 +111,12 @@ class IngApiHandler {
             println accountDetail;
             def adJson = new JsonSlurper().parseText(accountDetail);
             def iban = adJson.IBAN
-            BankAccount ba;
-            Optional<BankAccount> oBA = bankAccountRepository.findByIban(iban);
+            FCBankAccount ba;
+            Optional<FCBankAccount> oBA = bankAccountRepository.findByIban(iban);
             if (oBA.isPresent()) {
                 ba = oBA.get();
             } else {
-                ba = new BankAccount();
+                ba = new FCBankAccount();
                 ba.setIban(iban);
                 ba.setBank(adJson.bank_id)
                 ba.setUser(usr);
@@ -129,7 +129,7 @@ class IngApiHandler {
         // /my/banks/BANK_ID/accounts/ACCOUNT_ID/transactions
     }
 
-    void getSomeTransactions(String bankId, String accountId, BankAccount ba, TransactionRepository transactionRepository,
+    void getSomeTransactions(String bankId, String accountId, FCBankAccount ba, TransactionRepository transactionRepository,
                              OAuthRequest request,
                              OAuth1AccessToken accessToken) {
 
