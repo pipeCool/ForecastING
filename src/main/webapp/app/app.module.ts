@@ -18,12 +18,14 @@ import {
     JhiMainComponent,
     LayoutRoutingModule,
     NavbarComponent,
+    InfoHeaderComponent,
     FooterComponent,
     ProfileService,
     PageRibbonComponent,
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+
 
 @NgModule({
     imports: [
@@ -43,6 +45,7 @@ import {
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
+        InfoHeaderComponent,
         FooterComponent
     ],
     providers: [
