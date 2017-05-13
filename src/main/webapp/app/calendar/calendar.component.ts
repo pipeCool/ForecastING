@@ -63,7 +63,7 @@ export class CalendarComponent implements OnInit {
             .map((eventlist: CalendarEvent[]) => {
                 return eventlist.map((event: GoogleCalendarEvent) => {
                     let eventColor: EventColor = {
-                        primary: (event.backgroundColor ? '#303030' : event.backgroundColor),
+                        primary: event.backgroundColor,
                         secondary: '#fff'
                     };
                     return {

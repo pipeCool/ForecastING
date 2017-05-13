@@ -23,5 +23,17 @@
             (dayClicked)="dayClicked($event.day)"
             (eventClicked)="eventClicked($event.event)">
         </mwl-calendar-month-view>
+        <mwl-calendar-week-view
+            *ngSwitchCase="'week'"
+            [viewDate]="viewDate"
+            [events]="events"
+            (eventClicked)="eventClicked($event.event)">
+        </mwl-calendar-week-view>
+        <mwl-calendar-day-view
+            *ngSwitchCase="'day'"
+            [viewDate]="viewDate"
+            [events]="events"
+            (eventClicked)="eventClicked($event.event)">
+        </mwl-calendar-day-view>
     </div>
 </div>
