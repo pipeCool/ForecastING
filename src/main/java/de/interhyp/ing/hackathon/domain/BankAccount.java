@@ -12,7 +12,7 @@ import java.util.Objects;
  * A BankAccount.
  */
 @Entity
-@Table(name = "fc_bank_account")
+@Table(name = "bank_account")
 public class BankAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
