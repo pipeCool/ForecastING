@@ -1,10 +1,18 @@
 package de.interhyp.ing.hackathon.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import de.interhyp.ing.hackathon.domain.enumeration.TransactionStatus;
+import de.interhyp.ing.hackathon.repository.TransactionRepository;
+import org.springframework.data.annotation.*;
+
 
 import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Objects;
 
@@ -38,6 +46,10 @@ public class BankAccount implements Serializable {
 
     @ManyToOne
     private User user;
+
+    @Transient
+    @JsonProperty
+    private Double forecast = 10.0;
 
     public Long getId() {
         return id;
@@ -124,6 +136,11 @@ public class BankAccount implements Serializable {
         this.user = user;
     }
 
+    public Double getForecast()
+    {
+        return transactions.stream().filter( t -> t.getStatus().equals(TransactionStatus.PREDICTED)).mapToDouble(t -> t.getAmount()).sum();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -151,6 +168,7 @@ public class BankAccount implements Serializable {
             ", iban='" + getIban() + "'" +
             ", bank='" + getBank() + "'" +
             ", currentAmount='" + getCurrentAmount() + "'" +
+            ", forecast='" + getForecast() + "'" +
             "}";
     }
 }
