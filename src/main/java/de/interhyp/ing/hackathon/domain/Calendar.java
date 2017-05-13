@@ -29,8 +29,11 @@ public class Calendar implements Serializable {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "color")
-    private String color;
+    @Column(name = "backgroundcolor")
+    private String backgroundcolor;
+
+    @Column(name = "foregroundcolor")
+    private String foregroundcolor;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -83,19 +86,31 @@ public class Calendar implements Serializable {
         this.title = title;
     }
 
-    public String getColor() {
-        return color;
+    public String getBackgroundColor() {
+        return backgroundcolor;
     }
 
-    public Calendar color(String color) {
-        this.color = color;
+    public Calendar backgroundcolor(String backgroundcolor) {
+        this.backgroundcolor = backgroundcolor;
         return this;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setBackgroundColor(String backgroundcolor) {
+        this.backgroundcolor = backgroundcolor;
     }
 
+    public String getForegroundColor() {
+        return foregroundcolor;
+    }
+
+    public Calendar foregroundcolor(String foregroundcolor) {
+        this.foregroundcolor = foregroundcolor;
+        return this;
+    }
+
+    public void setForegroundColor(String foregroundcolor) {
+        this.foregroundcolor = foregroundcolor;
+    }
     public Location getLocation() {
         return location;
     }
@@ -136,7 +151,8 @@ public class Calendar implements Serializable {
             ", start='" + getStart() + "'" +
             ", end='" + getEnd() + "'" +
             ", title='" + getTitle() + "'" +
-            ", color='" + getColor() + "'" +
+            ", backgroundcolor='" + getBackgroundColor() + "'" +
+            ", foregroundcolor='" + getForegroundColor() + "'" +
             "}";
     }
 }

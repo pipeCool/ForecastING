@@ -14,6 +14,8 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.DateTime;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.calendar.CalendarScopes;
+import com.google.api.services.calendar.model.ColorDefinition;
+import com.google.api.services.calendar.model.Colors;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 import de.interhyp.ing.hackathon.domain.Calendar;
@@ -110,10 +112,17 @@ public class GoogleHandler
             System.out.println("No upcoming events found.");
         } else {
             System.out.println("Upcoming events");
+            Colors colors = service.colors().get().execute();
+
             for (Event event : items) {
                 Calendar element = new Calendar ();
                 element.setStart(ZonedDateTime.parse(event.getStart().getDateTime().toStringRfc3339()));
                 element.setEnd(ZonedDateTime.parse(event.getEnd().getDateTime().toStringRfc3339()));
+                ColorDefinition color = colors.getCalendar().get(event.getColorId());
+                if (color != null) {
+                    element.setBackgroundColor(color.getBackground());
+                    element.setForegroundColor(color.getForeground());
+                }
 
                 if (event.getLocation() != null)
                 {
