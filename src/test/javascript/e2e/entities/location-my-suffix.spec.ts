@@ -1,6 +1,6 @@
 import { browser, element, by, $ } from 'protractor';
 
-describe('Location e2e test', () => {
+describe('Location e2e initTillLogin', () => {
 
     const username = element(by.id('username'));
     const password = element(by.id('password'));

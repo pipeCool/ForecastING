@@ -1,6 +1,6 @@
 import { browser, element, by, $ } from 'protractor';
 
-describe('BankAccount e2e test', () => {
+describe('BankAccount e2e initTillLogin', () => {
 
     const username = element(by.id('username'));
     const password = element(by.id('password'));
