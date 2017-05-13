@@ -5,13 +5,20 @@ import de.interhyp.ing.hackathon.domain.Calendar;
 import de.interhyp.ing.hackathon.service.CalendarService;
 import de.interhyp.ing.hackathon.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -79,11 +86,21 @@ public class CalendarResource {
      *
      * @return the ResponseEntity with status 200 (OK) and the list of calendars in body
      */
-    @GetMapping("/calendars")
+    /*@GetMapping("/calendars")
     @Timed
     public List<Calendar> getAllCalendars() {
         log.debug("REST request to get all Calendars");
         return calendarService.findAll();
+    }*/
+
+    @GetMapping("/calendars/{from}/{till}")
+    @Timed
+    public List<Calendar> getSomeCalendars(
+        @RequestParam("from") String from,
+        @RequestParam("till") String till
+    ) {
+        log.debug("REST request to get all Calendars");
+        return calendarService.findSome(from, till);
     }
 
     /**

@@ -27,4 +27,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CalendarComponent
     ]
 })
-export class Interhyp4HackathonEntityModuleCalendarModule {}
+export class Interhyp4HackathonCalendarModule {}

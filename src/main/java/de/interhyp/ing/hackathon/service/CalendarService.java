@@ -1,6 +1,11 @@
 package de.interhyp.ing.hackathon.service;
 
 import de.interhyp.ing.hackathon.domain.Calendar;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,10 +23,12 @@ public interface CalendarService {
 
     /**
      *  Get all the calendars.
-     *  
+     *
      *  @return the list of entities
      */
     List<Calendar> findAll();
+
+    List<Calendar> findSome(String from, String till);
 
     /**
      *  Get the "id" calendar.
