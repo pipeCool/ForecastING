@@ -5,6 +5,7 @@
         "menu": {
             "home": "Accueil",
             "calendar": "Calendrier",
+            "map": "Carte",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
