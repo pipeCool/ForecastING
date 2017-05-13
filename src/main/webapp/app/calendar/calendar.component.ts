@@ -1,10 +1,15 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { CalendarEventAction, CalendarEvent } from 'angular-calendar';
+import { CalendarEvent } from 'angular-calendar';
 import { addHours, addDays, subDays, isSameMonth, isSameDay, startOfMonth, endOfMonth, startOfWeek, endOfWeek, startOfDay, endOfDay, format } from 'date-fns';
 import { Observable } from 'rxjs/Observable';
-import {colors} from "./calendar-utils/colors";
+import { EventColor } from 'angular-calendar';
+
+interface GoogleCalendarEvent extends CalendarEvent {
+    backgroundColor: string;
+    foregroundColor: string;
+}
 
 @Component({
     selector: 'jhi-calendar-component',
@@ -23,34 +28,10 @@ export class CalendarComponent implements OnInit {
 
     activeDayIsOpen: boolean = false;
 
-    events: CalendarEvent[] = [{
-        start: subDays(startOfDay(new Date()), 1),
-        end: addDays(new Date(), 1),
-        title: 'A 3 day event',
-        color: colors.red
-    }];
-/*
-    [{
-        "id" : 1051,
-        "start" : "2017-05-14T01:54:08.218+02:00",
-        "end" : "2017-05-14T00:54:08.218+02:00",
-        "title" : "Mach halt irgendwas rein",
-        "location" : {
-            "id" : 1001,
-            "streetAddress" : "string",
-            "postalCode" : "string",
-            "city" : "da",
-            "stateProvince" : "string",
-            "latitude" : "string",
-            "longitude" : "string"
-        }
-    }]*/
-
     modalData: {
         action: string,
         event: CalendarEvent
     };
-
 
     constructor(private http: Http) {
     }
@@ -74,17 +55,26 @@ export class CalendarComponent implements OnInit {
         }[this.view];
 
         const timespan: string = "?from=2010-05-13T04:30:38.472Z&till=2020-05-13T04:30:38.472Z";
+        let eventIndex: number = 0;
 
         this.events$ = this.http
             .get(this.serverUrl + timespan)
             .map(res => res.json())
             .map((eventlist: CalendarEvent[]) => {
-                return eventlist.map((event: CalendarEvent) => {
+                return eventlist.map((event: GoogleCalendarEvent) => {
+                    let eventColor: EventColor = {
+                        primary: (event.backgroundColor ? '#303030' : event.backgroundColor),
+                        secondary: '#fff'
+                    };
                     return {
                         title: event.title,
                         start: new Date(event.start),
                         end: new Date(event.end),
-                        color: colors.blue
+                        resizable: {
+                            beforeStart: true,
+                            afterEnd: true
+                        },
+                        color: eventColor
                     };
                 });
             });
