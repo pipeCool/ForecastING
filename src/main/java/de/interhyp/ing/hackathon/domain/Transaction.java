@@ -31,6 +31,9 @@ public class Transaction implements Serializable {
     @Column(name = "amount")
     private Double amount;
 
+    @Column(name = "new_balance")
+    private Double newBalance;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private TransactionStatus status;
@@ -40,6 +43,25 @@ public class Transaction implements Serializable {
 
     @ManyToOne
     private BankAccount bankaccount;
+
+    @OneToOne
+    private Calendar calendar;
+
+    public Double getNewBalance() {
+        return newBalance;
+    }
+
+    public void setNewBalance(Double newBalance) {
+        this.newBalance = newBalance;
+    }
+
+    public Calendar getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(Calendar calendar) {
+        this.calendar = calendar;
+    }
 
     public String getTrxId() {
         return trxId;

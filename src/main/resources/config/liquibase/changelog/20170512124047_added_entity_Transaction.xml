@@ -22,28 +22,33 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="jhi_date" type="timestamp">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
             </column>
 
             <column name="amount" type="double">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
+            </column>
+            <column name="new_balance" type="double">
+                <constraints nullable="true"/>
             </column>
 
-
             <column name="trx_id" type="varchar(255)">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
             </column>
 
             <column name="status" type="varchar(255)">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
             </column>
 
             <column name="location_id" type="bigint">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
             </column>
 
             <column name="bankaccount_id" type="bigint">
-                <constraints nullable="true" />
+                <constraints nullable="true"/>
+            </column>
+            <column name="calendar_id" type="bigint">
+                <constraints nullable="true"/>
             </column>
 
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->

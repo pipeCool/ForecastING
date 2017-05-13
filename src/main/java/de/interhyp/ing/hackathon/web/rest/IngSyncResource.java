@@ -1,10 +1,7 @@
 package de.interhyp.ing.hackathon.web.rest;
 
 import de.interhyp.ing.hackathon.external.ing.IngApiHandler;
-import de.interhyp.ing.hackathon.repository.AuthorityRepository;
-import de.interhyp.ing.hackathon.repository.BankAccountRepository;
-import de.interhyp.ing.hackathon.repository.TransactionRepository;
-import de.interhyp.ing.hackathon.repository.UserRepository;
+import de.interhyp.ing.hackathon.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -32,16 +29,18 @@ public class IngSyncResource {
     private final AuthorityRepository authorityRepository;
     private final BankAccountRepository bankAccountRepository;
     private final TransactionRepository transactionRepository;
+    private final CalendarRepository calendarRepository;
 
     public IngSyncResource(IngApiHandler ingApiHandler, UserRepository userRepository, PasswordEncoder passwordEncoder,
                            AuthorityRepository authorityRepository,
-                           BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository) {
+                           BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository, CalendarRepository calendarRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authorityRepository = authorityRepository;
         this.bankAccountRepository = bankAccountRepository;
         this.transactionRepository = transactionRepository;
         this.ingApiHandler = ingApiHandler;
+        this.calendarRepository = calendarRepository;
     }
 
     @GetMapping("/start")
@@ -61,7 +60,7 @@ public class IngSyncResource {
         CACHE.put(id, token);
         ingApiHandler.handleIt(id, token, userRepository, passwordEncoder,
             authorityRepository,
-            bankAccountRepository, transactionRepository);
+            bankAccountRepository, transactionRepository, calendarRepository);
         response.sendRedirect("http://localhost:8080");
 
     }

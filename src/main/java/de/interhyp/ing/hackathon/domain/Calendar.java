@@ -39,6 +39,18 @@ public class Calendar implements Serializable {
     @JoinColumn(unique = true)
     private Location location;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Transaction transaction;
+
+    public Transaction getTransaction() {
+        return transaction;
+    }
+
+    public void setTransaction(Transaction transaction) {
+        this.transaction = transaction;
+    }
+
     public Long getId() {
         return id;
     }

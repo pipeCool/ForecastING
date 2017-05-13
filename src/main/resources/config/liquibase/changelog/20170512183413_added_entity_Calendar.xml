@@ -33,16 +33,23 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="color" type="varchar(255)">
+            <column name="foregroundcolor" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="backgroundcolor" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="location_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
+            <column name="transaction_id" type="bigint">
+                <constraints unique="true" nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
         <dropDefaultValue tableName="calendar" columnName="jhi_start" columnDataType="datetime"/>
         <dropDefaultValue tableName="calendar" columnName="jhi_end" columnDataType="datetime"/>
-        
+
     </changeSet>
 </databaseChangeLog>

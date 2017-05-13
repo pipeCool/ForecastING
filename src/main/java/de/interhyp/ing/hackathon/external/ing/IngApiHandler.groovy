@@ -7,12 +7,16 @@ import com.github.scribejava.core.model.OAuthRequest
 import com.github.scribejava.core.model.Response
 import com.github.scribejava.core.model.Verb
 import com.github.scribejava.core.oauth.OAuth10aService
+import com.google.api.services.calendar.model.ColorDefinition
 import de.interhyp.ing.hackathon.domain.BankAccount
+import de.interhyp.ing.hackathon.domain.Calendar
+import de.interhyp.ing.hackathon.domain.Location
 import de.interhyp.ing.hackathon.domain.Transaction
 import de.interhyp.ing.hackathon.domain.User
 import de.interhyp.ing.hackathon.domain.enumeration.TransactionStatus
 import de.interhyp.ing.hackathon.repository.AuthorityRepository
 import de.interhyp.ing.hackathon.repository.BankAccountRepository
+import de.interhyp.ing.hackathon.repository.CalendarRepository
 import de.interhyp.ing.hackathon.repository.TransactionRepository
 import de.interhyp.ing.hackathon.repository.UserRepository
 import groovy.json.JsonSlurper
@@ -64,7 +68,8 @@ class IngApiHandler {
     void handleIt(String id,
                   String token, UserRepository userRepository, PasswordEncoder passwordEncoder,
                   AuthorityRepository authorityRepository,
-                  BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository) {
+                  BankAccountRepository bankAccountRepository, TransactionRepository transactionRepository,
+                  CalendarRepository calendarRepository) {
 
         if (service == null) {
             service = new ServiceBuilder()
@@ -126,7 +131,7 @@ class IngApiHandler {
                 ba = bankAccountRepository.save(ba)
             }
 
-            getSomeTransactions(bankId, accountId, ba, transactionRepository, request, accessToken)
+            getSomeTransactions(bankId, accountId, ba, transactionRepository, request, accessToken, calendarRepository)
         }
         println "num results:" + result.size()
         // /my/banks/BANK_ID/accounts/ACCOUNT_ID/transactions
@@ -136,10 +141,14 @@ class IngApiHandler {
 
     void getSomeTransactions(String bankId, String accountId, BankAccount ba, TransactionRepository transactionRepository,
                              OAuthRequest request,
-                             OAuth1AccessToken accessToken) {
+                             OAuth1AccessToken accessToken, CalendarRepository calendarRepository) {
 
         def trx = doCallServiceWHeader(service, accessToken, request, "/my/banks/$bankId/accounts/$accountId/transactions", 0)
 
+        parseTrxToDb(trx, transactionRepository, ba, calendarRepository, accessToken, request, bankId, accountId)
+    }
+
+    public void parseTrxToDb(String trx, transactionRepository, BankAccount ba, calendarRepository, OAuth1AccessToken accessToken, OAuthRequest request, String bankId, String accountId) {
         def trxResults = new JsonSlurper().parseText(trx);
         trxResults.transactions.each {
             Optional<Transaction> oTrx = transactionRepository.findByTrxId(it.id);
@@ -152,9 +161,24 @@ class IngApiHandler {
                 def amount1 = Double.parseDouble(it.details.value.amount)
                 toSave.setAmount(amount1)
                 toSave.setStatus(TransactionStatus.FIXED)
-                transactionRepository.save(toSave)
+                toSave.setNewBalance(Double.parseDouble(it.details.new_balance.amount))
+                toSave = transactionRepository.save(toSave)
+
+                Calendar element = new Calendar();
+                element.setStart(completedTime1);
+                element.setEnd(completedTime1.plusHours(1L));
+
+                if (toSave.getNewBalance() < 500) {
+                    element.setBackgroundColor("#FF0000");
+                } else {
+                    element.setBackgroundColor("#00FF00");
+                }
+
+                element.setTitle(it.details.description);
+                element.setTransaction(toSave);
+                calendarRepository.save(element);
                 //simple predict now: copy last 30Days + rand Factor
-                def between = ChronoUnit.DAYS.between(Instant.now(), completedTime1)c
+                def between = ChronoUnit.DAYS.between(Instant.now(), completedTime1)
                 if (between < 0 && between > -30) {
                     //Clone!
 
@@ -166,7 +190,20 @@ class IngApiHandler {
                     def amount = Double.parseDouble(it.details.value.amount)
                     toSave2.setAmount(amount)
                     toSave2.setStatus(TransactionStatus.PREDICTED)
-                    transactionRepository.save(toSave2)
+                    toSave2 = transactionRepository.save(toSave2)
+
+                    Calendar elementp = new Calendar();
+                    elementp.setStart(completedTime.plusDays(30L));
+                    elementp.setEnd(completedTime.plusDays(30L).plusHours(1L));
+
+                    if (toSave.getNewBalance() < 500) {
+                        elementp.setBackgroundColor("#FF0000");
+                    } else {
+                        elementp.setBackgroundColor("#00FF00");
+                    }
+                    elementp.setTitle("Prediction ");
+                    elementp.setTransaction(toSave2)
+                    calendarRepository.save(elementp);
                 }
             }
         }
