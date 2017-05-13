@@ -54,13 +54,15 @@ public class IngSyncResource {
     }
 
     @GetMapping("/callback/{id}/")
-    public void oauthCallback(@PathVariable(name = "id") String id, @RequestParam(name = "oauth_verifier") String token) throws IOException {
+    public void oauthCallback(@PathVariable(name = "id") String id, @RequestParam(name = "oauth_verifier") String token,
+                              HttpServletResponse response) throws IOException {
         log.info("called - will try handshake 1.. got Token {}.. - lets Put in in Cache..", token);
         //TODO Later link to user...
         CACHE.put(id, token);
         ingApiHandler.handleIt(id, token, userRepository, passwordEncoder,
             authorityRepository,
             bankAccountRepository, transactionRepository);
+        response.sendRedirect("http://localhost:8080");
 
     }
 }

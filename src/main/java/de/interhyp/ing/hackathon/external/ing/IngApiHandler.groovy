@@ -19,7 +19,9 @@ import groovy.json.JsonSlurper
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 
+import java.time.Instant
 import java.time.ZonedDateTime
+import java.time.temporal.ChronoUnit
 
 /**
  * Created by Notebook-11 on 12/05/2017.
@@ -95,6 +97,7 @@ class IngApiHandler {
             usr.setFirstName(getFirstName(email))
             usr.setFirstName(getLastName(email))
             usr.setLogin(email)
+            usr.setActivated(true)
             usr.setPassword(passwordEncoder.encode(email));
             usr = userRepository.save(usr)
         }
@@ -127,6 +130,8 @@ class IngApiHandler {
         }
         println "num results:" + result.size()
         // /my/banks/BANK_ID/accounts/ACCOUNT_ID/transactions
+
+
     }
 
     void getSomeTransactions(String bankId, String accountId, BankAccount ba, TransactionRepository transactionRepository,
@@ -142,10 +147,27 @@ class IngApiHandler {
                 Transaction toSave = new Transaction()
                 toSave.setBankaccount(ba)
                 toSave.setTrxId(it.id)
-                toSave.setDate(ZonedDateTime.parse( it.details.completed));
-                toSave.setAmount(Double.parseDouble(it.details.value.amount))
+                def completedTime1 = ZonedDateTime.parse(it.details.completed)
+                toSave.setDate(completedTime1);
+                def amount1 = Double.parseDouble(it.details.value.amount)
+                toSave.setAmount(amount1)
                 toSave.setStatus(TransactionStatus.FIXED)
                 transactionRepository.save(toSave)
+                //simple predict now: copy last 30Days + rand Factor
+                def between = ChronoUnit.DAYS.between(Instant.now(), completedTime1)c
+                if (between < 0 && between > -30) {
+                    //Clone!
+
+                    Transaction toSave2 = new Transaction()
+                    toSave2.setBankaccount(ba)
+                    toSave2.setTrxId("s" + it.id)
+                    def completedTime = ZonedDateTime.parse(it.details.completed)
+                    toSave2.setDate(completedTime.plusDays(30L));
+                    def amount = Double.parseDouble(it.details.value.amount)
+                    toSave2.setAmount(amount)
+                    toSave2.setStatus(TransactionStatus.PREDICTED)
+                    transactionRepository.save(toSave2)
+                }
             }
         }
         println doCallService(service, accessToken, request, "/banks/$bankId/accounts/$accountId/owner/transactions")
