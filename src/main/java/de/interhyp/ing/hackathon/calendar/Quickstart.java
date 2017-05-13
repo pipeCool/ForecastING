@@ -107,7 +107,7 @@ public class Quickstart {
             .build();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void manualMain(String[] args) throws IOException {
         // Build a new authorized API client service.
         // Note: Do not confuse this class with the
         //   com.google.api.services.calendar.model.Calendar class.
