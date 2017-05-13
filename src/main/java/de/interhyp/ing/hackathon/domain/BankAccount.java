@@ -9,11 +9,11 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * A FCBankAccount.
+ * A BankAccount.
  */
 @Entity
 @Table(name = "fc_bank_account")
-public class FCBankAccount implements Serializable {
+public class BankAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,7 @@ public class FCBankAccount implements Serializable {
     private Set<Transaction> transactions = new HashSet<>();
 
     @ManyToOne
-    private FCUser user;
+    private User user;
 
     public Long getId() {
         return id;
@@ -50,7 +50,7 @@ public class FCBankAccount implements Serializable {
         return iban;
     }
 
-    public FCBankAccount iban(String iban) {
+    public BankAccount iban(String iban) {
         this.iban = iban;
         return this;
     }
@@ -63,7 +63,7 @@ public class FCBankAccount implements Serializable {
         return bank;
     }
 
-    public FCBankAccount bank(String bank) {
+    public BankAccount bank(String bank) {
         this.bank = bank;
         return this;
     }
@@ -76,7 +76,7 @@ public class FCBankAccount implements Serializable {
         return currentAmount;
     }
 
-    public FCBankAccount currentAmount(Double currentAmount) {
+    public BankAccount currentAmount(Double currentAmount) {
         this.currentAmount = currentAmount;
         return this;
     }
@@ -89,18 +89,18 @@ public class FCBankAccount implements Serializable {
         return transactions;
     }
 
-    public FCBankAccount transactions(Set<Transaction> transactions) {
+    public BankAccount transactions(Set<Transaction> transactions) {
         this.transactions = transactions;
         return this;
     }
 
-    public FCBankAccount addTransaction(Transaction transaction) {
+    public BankAccount addTransaction(Transaction transaction) {
         this.transactions.add(transaction);
         transaction.setBankaccount(this);
         return this;
     }
 
-    public FCBankAccount removeTransaction(Transaction transaction) {
+    public BankAccount removeTransaction(Transaction transaction) {
         this.transactions.remove(transaction);
         transaction.setBankaccount(null);
         return this;
@@ -110,17 +110,17 @@ public class FCBankAccount implements Serializable {
         this.transactions = transactions;
     }
 
-    public FCUser getUser() {
+    public User getUser() {
         return user;
     }
 
-    public FCBankAccount user(FCUser fCUser) {
-        this.user = fCUser;
+    public BankAccount user(User user) {
+        this.user = user;
         return this;
     }
 
-    public void setUser(FCUser fCUser) {
-        this.user = fCUser;
+    public void setUser( User fCUser) {
+        this.user = user;
     }
 
     @Override
@@ -131,7 +131,7 @@ public class FCBankAccount implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        FCBankAccount fCBankAccount = (FCBankAccount) o;
+        BankAccount fCBankAccount = (BankAccount) o;
         if (fCBankAccount.getId() == null || getId() == null) {
             return false;
         }
@@ -145,7 +145,7 @@ public class FCBankAccount implements Serializable {
 
     @Override
     public String toString() {
-        return "FCBankAccount{" +
+        return "BankAccount{" +
             "id=" + getId() +
             ", iban='" + getIban() + "'" +
             ", bank='" + getBank() + "'" +

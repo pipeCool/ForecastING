@@ -3,7 +3,7 @@ entity FCUser {
     login String required
 }
 
-entity FCBankAccount {
+entity BankAccount {
 	iban String,
     bank String,
     currentAmount Double
@@ -38,11 +38,11 @@ enum TransactionStatus {
 }
 
 relationship OneToMany {
-	FCUser{bankaccount} to FCBankAccount{user}
+	FCUser{bankaccount} to BankAccount{user}
 }
 
 relationship OneToMany {
-	FCBankAccount{transaction} to Transaction{bankaccount}
+	BankAccount{transaction} to Transaction{bankaccount}
 }
 
 relationship ManyToOne {

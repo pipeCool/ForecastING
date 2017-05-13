@@ -39,7 +39,7 @@ public class Transaction implements Serializable {
     private Location location;
 
     @ManyToOne
-    private FCBankAccount bankaccount;
+    private BankAccount bankaccount;
 
     public String getTrxId() {
         return trxId;
@@ -109,16 +109,16 @@ public class Transaction implements Serializable {
         this.location = location;
     }
 
-    public FCBankAccount getBankaccount() {
+    public BankAccount getBankaccount() {
         return bankaccount;
     }
 
-    public Transaction bankaccount(FCBankAccount BankAccount) {
+    public Transaction bankaccount(BankAccount BankAccount) {
         this.bankaccount = BankAccount;
         return this;
     }
 
-    public void setBankaccount(FCBankAccount BankAccount) {
+    public void setBankaccount(BankAccount BankAccount) {
         this.bankaccount = BankAccount;
     }
 

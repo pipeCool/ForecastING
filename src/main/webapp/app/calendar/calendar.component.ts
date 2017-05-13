@@ -73,12 +73,10 @@ export class CalendarComponent implements OnInit {
             day: endOfDay
         }[this.view];
 
-        const search: URLSearchParams = new URLSearchParams();
-        search.set('primary_release_date.gte', format(getStart(this.viewDate), 'YYYY-MM-DD'));
-        search.set('primary_release_date.lte', format(getEnd(this.viewDate), 'YYYY-MM-DD'));
+        const timespan: string = "?from=2010-05-13T04:30:38.472Z&till=2020-05-13T04:30:38.472Z";
 
         this.events$ = this.http
-            .get(this.serverUrl)
+            .get(this.serverUrl + timespan)
             .map(res => res.json())
             .map((eventlist: CalendarEvent[]) => {
                 return eventlist.map((event: CalendarEvent) => {

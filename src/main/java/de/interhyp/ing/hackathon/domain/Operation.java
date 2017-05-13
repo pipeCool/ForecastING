@@ -36,7 +36,7 @@ public class Operation implements Serializable {
     private BigDecimal amount;
 
     @ManyToOne
-    private FCBankAccount bankAccount;
+    private BankAccount bankAccount;
 
     @ManyToMany
     @JoinTable(name = "operation_label",
@@ -76,11 +76,11 @@ public class Operation implements Serializable {
         this.amount = amount;
     }
 
-    public FCBankAccount getBankAccount() {
+    public BankAccount getBankAccount() {
         return bankAccount;
     }
 
-    public void setBankAccount(FCBankAccount bankAccount) {
+    public void setBankAccount(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 

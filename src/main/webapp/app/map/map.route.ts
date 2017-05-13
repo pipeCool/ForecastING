@@ -4,7 +4,7 @@ import { UserRouteAccessService } from '../shared';
 import { MapComponent } from './';
 
 export const MAP_ROUTE: Route = {
-    path: 'map',
+    path: 'gmap',
     component: MapComponent,
     data: {
         authorities: [],

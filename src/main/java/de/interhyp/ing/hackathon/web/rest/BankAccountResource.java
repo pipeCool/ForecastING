@@ -1,9 +1,9 @@
 package de.interhyp.ing.hackathon.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import de.interhyp.ing.hackathon.domain.FCBankAccount;
+import de.interhyp.ing.hackathon.domain.BankAccount;
 
-import de.interhyp.ing.hackathon.repository.FCBankAccountRepository;
+import de.interhyp.ing.hackathon.repository.BankAccountRepository;
 import de.interhyp.ing.hackathon.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
@@ -17,19 +17,19 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing FCBankAccount.
+ * REST controller for managing BankAccount.
  */
 @RestController
 @RequestMapping("/api")
-public class FCBankAccountResource {
+public class BankAccountResource {
 
-    private final Logger log = LoggerFactory.getLogger(FCBankAccountResource.class);
+    private final Logger log = LoggerFactory.getLogger(BankAccountResource.class);
 
     private static final String ENTITY_NAME = "fCBankAccount";
-        
-    private final FCBankAccountRepository fCBankAccountRepository;
 
-    public FCBankAccountResource(FCBankAccountRepository fCBankAccountRepository) {
+    private final BankAccountRepository fCBankAccountRepository;
+
+    public BankAccountResource(BankAccountRepository fCBankAccountRepository) {
         this.fCBankAccountRepository = fCBankAccountRepository;
     }
 
@@ -42,12 +42,12 @@ public class FCBankAccountResource {
      */
     @PostMapping("/f-c-bank-accounts")
     @Timed
-    public ResponseEntity<FCBankAccount> createFCBankAccount(@RequestBody FCBankAccount fCBankAccount) throws URISyntaxException {
-        log.debug("REST request to save FCBankAccount : {}", fCBankAccount);
+    public ResponseEntity<BankAccount> createFCBankAccount(@RequestBody BankAccount fCBankAccount) throws URISyntaxException {
+        log.debug("REST request to save BankAccount : {}", fCBankAccount);
         if (fCBankAccount.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new fCBankAccount cannot already have an ID")).body(null);
         }
-        FCBankAccount result = fCBankAccountRepository.save(fCBankAccount);
+        BankAccount result = fCBankAccountRepository.save(fCBankAccount);
         return ResponseEntity.created(new URI("/api/f-c-bank-accounts/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -64,12 +64,12 @@ public class FCBankAccountResource {
      */
     @PutMapping("/f-c-bank-accounts")
     @Timed
-    public ResponseEntity<FCBankAccount> updateFCBankAccount(@RequestBody FCBankAccount fCBankAccount) throws URISyntaxException {
-        log.debug("REST request to update FCBankAccount : {}", fCBankAccount);
+    public ResponseEntity<BankAccount> updateFCBankAccount(@RequestBody BankAccount fCBankAccount) throws URISyntaxException {
+        log.debug("REST request to update BankAccount : {}", fCBankAccount);
         if (fCBankAccount.getId() == null) {
             return createFCBankAccount(fCBankAccount);
         }
-        FCBankAccount result = fCBankAccountRepository.save(fCBankAccount);
+        BankAccount result = fCBankAccountRepository.save(fCBankAccount);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, fCBankAccount.getId().toString()))
             .body(result);
@@ -82,9 +82,9 @@ public class FCBankAccountResource {
      */
     @GetMapping("/f-c-bank-accounts")
     @Timed
-    public List<FCBankAccount> getAllFCBankAccounts() {
+    public List<BankAccount> getAllFCBankAccounts() {
         log.debug("REST request to get all FCBankAccounts");
-        List<FCBankAccount> fCBankAccounts = fCBankAccountRepository.findAll();
+        List<BankAccount> fCBankAccounts = fCBankAccountRepository.findAll();
         return fCBankAccounts;
     }
 
@@ -96,9 +96,9 @@ public class FCBankAccountResource {
      */
     @GetMapping("/f-c-bank-accounts/{id}")
     @Timed
-    public ResponseEntity<FCBankAccount> getFCBankAccount(@PathVariable Long id) {
-        log.debug("REST request to get FCBankAccount : {}", id);
-        FCBankAccount fCBankAccount = fCBankAccountRepository.findOne(id);
+    public ResponseEntity<BankAccount> getFCBankAccount(@PathVariable Long id) {
+        log.debug("REST request to get BankAccount : {}", id);
+        BankAccount fCBankAccount = fCBankAccountRepository.findOne(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(fCBankAccount));
     }
 
@@ -111,7 +111,7 @@ public class FCBankAccountResource {
     @DeleteMapping("/f-c-bank-accounts/{id}")
     @Timed
     public ResponseEntity<Void> deleteFCBankAccount(@PathVariable Long id) {
-        log.debug("REST request to delete FCBankAccount : {}", id);
+        log.debug("REST request to delete BankAccount : {}", id);
         fCBankAccountRepository.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
