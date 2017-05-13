@@ -1,0 +1,11 @@
+version: '2'
+services:
+    interhyp4hackathon-postgresql:
+        image: postgres:9.6.2
+        # volumes:
+        #     - ~/volumes/jhipster/interhyp4hackathon/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=interhyp4hackathon
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

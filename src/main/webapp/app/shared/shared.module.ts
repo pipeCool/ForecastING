@@ -3,8 +3,8 @@ import { DatePipe } from '@angular/common';
 
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import {
-    JhipsterSampleApplicationNg2SharedLibsModule,
-    JhipsterSampleApplicationNg2SharedCommonModule,
+    Interhyp4HackathonSharedLibsModule,
+    Interhyp4HackathonSharedCommonModule,
     CSRFService,
     AuthServerProvider,
     AccountService,
@@ -19,8 +19,8 @@ import {
 
 @NgModule({
     imports: [
-        JhipsterSampleApplicationNg2SharedLibsModule,
-        JhipsterSampleApplicationNg2SharedCommonModule
+        Interhyp4HackathonSharedLibsModule,
+        Interhyp4HackathonSharedCommonModule
     ],
     declarations: [
         JhiLoginModalComponent,
@@ -40,7 +40,7 @@ import {
     ],
     entryComponents: [JhiLoginModalComponent],
     exports: [
-        JhipsterSampleApplicationNg2SharedCommonModule,
+        Interhyp4HackathonSharedCommonModule,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective,
         DatePipe
@@ -48,4 +48,4 @@ import {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
-export class JhipsterSampleApplicationNg2SharedModule {}
+export class Interhyp4HackathonSharedModule {}

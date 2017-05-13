@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { JhipsterSampleApplicationNg2SharedModule } from '../shared';
+import { Interhyp4HackathonSharedModule } from '../shared';
 /* jhipster-needle-add-admin-module-import - JHipster will add admin modules imports here */
 
 import {
@@ -32,7 +32,7 @@ import {
 
 @NgModule({
     imports: [
-        JhipsterSampleApplicationNg2SharedModule,
+        Interhyp4HackathonSharedModule,
         RouterModule.forRoot(adminState, { useHash: true }),
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
@@ -70,4 +70,4 @@ import {
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JhipsterSampleApplicationNg2AdminModule {}
+export class Interhyp4HackathonAdminModule {}

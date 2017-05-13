@@ -24,7 +24,7 @@ describe('Label e2e test', () => {
     it('should load Labels', () => {
         entityMenu.click();
         element.all(by.css('[routerLink="label"]')).first().click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.label.home.title/;
+            const expectVal = /interhyp4HackathonApp.label.home.title/;
             element.all(by.css('h2 span')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });
@@ -33,7 +33,7 @@ describe('Label e2e test', () => {
 
     it('should load create Label dialog', function () {
         element(by.css('button.create-label')).click().then(() => {
-            const expectVal = /jhipsterSampleApplicationNg2App.label.home.createOrEditLabel/;
+            const expectVal = /interhyp4HackathonApp.label.home.createOrEditLabel/;
             element.all(by.css('h4.modal-title')).first().getAttribute('jhiTranslate').then((value) => {
                 expect(value).toMatch(expectVal);
             });

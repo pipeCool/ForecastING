@@ -13,7 +13,6 @@ import { Observable }  from 'rxjs/Observable';
 @Injectable()
 export class InfoHeaderComponent  {
 
-
     constructor(private http: Http) { }
 
     getInfoHeader(): Observable<InfoHeaderComponent[]> {
@@ -24,16 +23,13 @@ export class InfoHeaderComponent  {
         });
 
 
-        var test = this.http
+        let test = this.http
             .get('./src/static/account.json', options)
             .map(resp => resp.json());
 
         console.log("huhu", test);
 
         return test;
-
-
     }
-
 
 }

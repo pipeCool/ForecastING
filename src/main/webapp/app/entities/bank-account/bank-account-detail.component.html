@@ -1,18 +1,22 @@
 
 <div *ngIf="bankAccount">
-    <h2><span jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.detail.title">Bank Account</span> {{bankAccount.id}}</h2>
+    <h2><span jhiTranslate="interhyp4HackathonApp.bankAccount.detail.title">Bank Account</span> {{bankAccount.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
-        <dt><span jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.name">Name</span></dt>
+        <dt><span jhiTranslate="interhyp4HackathonApp.bankAccount.iban">Iban</span></dt>
         <dd>
-            <span>{{bankAccount.name}}</span>
+            <span>{{bankAccount.iban}}</span>
         </dd>
-        <dt><span jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.balance">Balance</span></dt>
+        <dt><span jhiTranslate="interhyp4HackathonApp.bankAccount.bank">Bank</span></dt>
         <dd>
-            <span>{{bankAccount.balance}}</span>
+            <span>{{bankAccount.bank}}</span>
         </dd>
-        <dt><span jhiTranslate="jhipsterSampleApplicationNg2App.bankAccount.user">User</span></dt>
+        <dt><span jhiTranslate="interhyp4HackathonApp.bankAccount.currentAmount">Current Amount</span></dt>
+        <dd>
+            <span>{{bankAccount.currentAmount}}</span>
+        </dd>
+        <dt><span jhiTranslate="interhyp4HackathonApp.bankAccount.user">User</span></dt>
         <dd>
             {{bankAccount.user?.login}}
         </dd>

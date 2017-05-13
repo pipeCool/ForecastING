@@ -1,0 +1,31 @@
+{
+    "colorId" : "9",
+    "created" : "2017-05-12T14:54:05.000Z",
+    "creator" : {
+        "email" : "reapertestxi@gmail.com",
+        "self" : true
+    },
+    "end" : {
+        "dateTime" : "2017-05-14T14:30:00.000+02:00"
+    },
+    "etag" : "\"2989204159874000\"",
+    "htmlLink" : "https://www.google.com/calendar/event?eid=OWthdjlpbTNjaGE2Y2I1YmptZDQzbGlyOGcgcmVhcGVydGVzdHhpQG0",
+    "iCalUID" : "9kav9im3cha6cb5bjmd43lir8g@google.com",
+    "id" : "9kav9im3cha6cb5bjmd43lir8g",
+    "kind" : "calendar#event",
+    "location" : "Laimers, Agricolastraße 16, 80687 München, Deutschland",
+    "organizer" : {
+        "email" : "reapertestxi@gmail.com",
+        "self" : true
+    },
+    "reminders" : {
+        "useDefault" : true
+    },
+    "sequence" : 1,
+    "start" : {
+        "dateTime" : "2017-05-14T12:30:00.000+02:00"
+    },
+    "status" : "confirmed",
+    "summary" : "Zurück in München",
+    "updated" : "2017-05-12T15:14:39.937Z"
+}

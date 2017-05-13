@@ -22,7 +22,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class CalendarComponent implements OnInit {
 
-    serverUrl: string = 'http://localhost:8080/api/calendars';
+    serverUrl: string = '/api/calendars';
 
     view: string = 'month';
 

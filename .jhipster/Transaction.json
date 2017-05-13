@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "bankaccount",
+            "otherEntityName": "BankAccount",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "trxId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "TransactionStatus",
+            "fieldValues": "FIXED,PENDING,PREDICTED"
+        }
+    ],
+    "changelogDate": "20170512124047",
+    "entityTableName": "transaction",
+    "service": "serviceImpl",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "angularJSSuffix": "mySuffix"
+}

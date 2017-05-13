@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
-import { JhipsterSampleApplicationNg2SharedModule } from '../shared';
+import { Interhyp4HackathonSharedModule } from '../shared';
 import { CALENDAR_ROUTE, CalendarComponent} from './';
 import { CalendarUtilsModule } from './calendar-utils/module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CalendarModule.forRoot(),
         BrowserAnimationsModule,
         CalendarUtilsModule,
-        JhipsterSampleApplicationNg2SharedModule,
+        Interhyp4HackathonSharedModule,
         RouterModule.forRoot([ CALENDAR_ROUTE ], { useHash: true })
     ],
     declarations: [
@@ -27,4 +27,4 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CalendarComponent
     ]
 })
-export class JhipsterSampleApplicationNg2CalendarModule {}
+export class Interhyp4HackathonEntityModuleCalendarModule {}

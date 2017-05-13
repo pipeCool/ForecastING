@@ -1,8 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { JhipsterSampleApplicationNg2SharedModule } from '../../shared';
-import { JhipsterSampleApplicationNg2AdminModule } from '../../admin/admin.module';
+import { Interhyp4HackathonSharedModule } from '../../shared';
+import { Interhyp4HackathonAdminModule } from '../../admin/admin.module';
 import {
     BankAccountService,
     BankAccountPopupService,
@@ -23,8 +23,8 @@ const ENTITY_STATES = [
 
 @NgModule({
     imports: [
-        JhipsterSampleApplicationNg2SharedModule,
-        JhipsterSampleApplicationNg2AdminModule,
+        Interhyp4HackathonSharedModule,
+        Interhyp4HackathonAdminModule,
         RouterModule.forRoot(ENTITY_STATES, { useHash: true })
     ],
     declarations: [
@@ -48,4 +48,4 @@ const ENTITY_STATES = [
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JhipsterSampleApplicationNg2BankAccountModule {}
+export class Interhyp4HackathonBankAccountModule {}
